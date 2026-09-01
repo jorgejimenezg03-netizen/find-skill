@@ -1,0 +1,692 @@
+<title>Sub-4 en 25 semanas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root{
+  --paper:#E9ECEC; --card:#FBFCFC; --card2:#F1F4F4;
+  --ink:#12191C; --muted:#5D6A6F; --rule:#CFD6D8; --rule-soft:#E0E5E6;
+  --nado:#0B6E7F; --bici:#C2571F; --corre:#54579C; --fuerza:#6C7377;
+  --ok:#2F7A4D; --riesgo:#A6431F;
+  --shadow:0 1px 2px rgba(18,25,28,.06),0 8px 24px -16px rgba(18,25,28,.35);
+  --display:"Barlow Condensed","Haettenschweiler","Arial Narrow",sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono","SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1416; --card:#161E21; --card2:#1C2529;
+    --ink:#E7ECED; --muted:#98A6AA; --rule:#2A3539; --rule-soft:#212B2F;
+    --nado:#45A6B6; --bici:#EE8447; --corre:#9498DE; --fuerza:#94A0A5;
+    --ok:#5FBB84; --riesgo:#E0805B;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -18px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1416; --card:#161E21; --card2:#1C2529;
+  --ink:#E7ECED; --muted:#98A6AA; --rule:#2A3539; --rule-soft:#212B2F;
+  --nado:#45A6B6; --bici:#EE8447; --corre:#9498DE; --fuerza:#94A0A5;
+  --ok:#5FBB84; --riesgo:#E0805B;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -18px rgba(0,0,0,.9);
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;padding:0 0 5rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+.col{max-width:68ch}
+h1,h2,h3,h4,.eyebrow,th,.chip,.btn,.tab{font-family:var(--display)}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:700;line-height:1.05;letter-spacing:-.01em;margin:0 0 .35rem;text-wrap:balance}
+h3{font-size:1.42rem;font-weight:600;line-height:1.15;margin:2.4rem 0 .5rem;text-wrap:balance}
+h4{font-size:1.1rem;font-weight:600;margin:1.6rem 0 .35rem;letter-spacing:.01em}
+p{margin:0 0 1rem}
+a{color:var(--nado)}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:600;color:var(--muted)}
+.num,.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+strong{font-weight:600}
+hr{border:0;border-top:1px solid var(--rule);margin:0}
+
+/* ---------- hero ---------- */
+header.hero{border-bottom:1px solid var(--rule);background:var(--card);padding:clamp(2.2rem,6vw,3.6rem) 0 2rem;margin-bottom:2.5rem}
+.hero .eyebrow{display:block;margin-bottom:.8rem}
+.hero h1{font-size:clamp(3rem,10vw,6.4rem);font-weight:700;line-height:.86;letter-spacing:-.02em;margin:0 0 1rem;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--bici)}
+.hero .lede{font-size:1.15rem;max-width:60ch;color:var(--ink)}
+.factbar{display:flex;flex-wrap:wrap;gap:2rem 3rem;margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--rule-soft)}
+.fact{display:flex;flex-direction:column;gap:.15rem}
+.fact .k{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--muted)}
+.fact .v{font-family:var(--mono);font-size:1.5rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1}
+
+/* ---------- sections ---------- */
+section{margin:0 0 4.2rem}
+.shead{display:flex;align-items:baseline;gap:1rem;border-top:2px solid var(--ink);padding-top:.7rem;margin-bottom:1.4rem}
+.shead .n{font-family:var(--mono);font-size:.82rem;font-weight:600;color:var(--muted);padding-top:.45rem}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--rule);border-radius:3px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th{font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;color:var(--muted);
+  text-align:left;padding:.7rem .9rem;border-bottom:1px solid var(--rule);white-space:nowrap;background:var(--card2)}
+td{padding:.62rem .9rem;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n,th.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.hi{font-weight:600;color:var(--bici)}
+caption{caption-side:bottom;text-align:left;padding:.7rem .9rem;font-size:.85rem;color:var(--muted);border-top:1px solid var(--rule-soft)}
+
+/* ---------- discipline chips ---------- */
+.chip{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600;
+  padding:.14rem .45rem;border-radius:2px;border:1px solid currentColor;white-space:nowrap}
+.c-nado{color:var(--nado)} .c-bici{color:var(--bici)} .c-corre{color:var(--corre)} .c-fuerza{color:var(--fuerza)}
+
+/* ---------- calibrador ---------- */
+.calib{background:var(--card);border:1px solid var(--rule);border-radius:4px;box-shadow:var(--shadow);overflow:hidden}
+.calib-in{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:1rem 1.4rem;padding:1.4rem;border-bottom:1px solid var(--rule)}
+.field{display:flex;flex-direction:column;gap:.3rem}
+.field label{font-family:var(--display);text-transform:uppercase;letter-spacing:.11em;font-size:.72rem;font-weight:600;color:var(--muted)}
+.field input,.field select{font-family:var(--mono);font-size:1.05rem;font-weight:500;padding:.45rem .55rem;
+  background:var(--card2);color:var(--ink);border:1px solid var(--rule);border-radius:3px;width:100%}
+.field input:focus,.field select:focus,button:focus-visible,.tab:focus-visible{outline:2px solid var(--bici);outline-offset:2px}
+.field .hint{font-size:.74rem;color:var(--muted);font-family:var(--body);line-height:1.35}
+.proj{display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:1.4rem;padding:1.4rem;align-items:start}
+.proj-total{border-right:1px solid var(--rule);padding-right:1.4rem}
+.proj-total .big{font-family:var(--mono);font-size:3.1rem;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.verdict{font-family:var(--display);font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;margin-top:.5rem;display:block}
+.v-ok{color:var(--ok)} .v-mid{color:var(--bici)} .v-no{color:var(--riesgo)}
+.proj-note{font-size:.88rem;color:var(--muted);margin-top:.5rem;font-family:var(--body)}
+.splits{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.9rem}
+.split{border-top:2px solid var(--rule);padding-top:.5rem}
+.split.s-nado{border-color:var(--nado)} .split.s-bici{border-color:var(--bici)} .split.s-corre{border-color:var(--corre)}
+.split .k{font-family:var(--display);text-transform:uppercase;letter-spacing:.11em;font-size:.7rem;color:var(--muted)}
+.split .t{font-family:var(--mono);font-size:1.45rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.2}
+.split .d{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+
+/* ---------- carga semanal ---------- */
+.load{display:flex;align-items:flex-end;gap:2px;height:190px;margin:1.4rem 0 .3rem;
+  padding:0 0 0 0;border-bottom:1px solid var(--rule);overflow-x:auto}
+.bar{flex:1 0 22px;display:flex;flex-direction:column;justify-content:flex-end;height:100%}
+.bar i{display:block;border-radius:2px 2px 0 0;background:var(--fuerza);transition:filter .15s}
+.bar[data-b="test"] i{background:var(--muted)}
+.bar[data-b="base"] i{background:var(--nado)}
+.bar[data-b="constr"] i{background:var(--corre)}
+.bar[data-b="espec"] i{background:var(--bici)}
+.bar[data-b="descarga"] i{background:var(--rule);border:1px solid var(--muted);border-bottom:0}
+.bar[data-b="taper"] i{background:repeating-linear-gradient(45deg,var(--bici),var(--bici) 3px,transparent 3px,transparent 6px);border:1px solid var(--bici);border-bottom:0}
+.bar b{text-align:center;font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--muted);line-height:1.1;padding-bottom:2px}
+.bar:hover i{filter:brightness(1.15)}
+.load-x{display:flex;gap:2px;font-family:var(--mono);font-size:.6rem;color:var(--muted);overflow-x:auto}
+.load-x span{flex:1 0 22px;text-align:center}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1rem;font-size:.8rem;color:var(--muted);font-family:var(--body)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+
+/* ---------- tabs ---------- */
+.tabs{display:flex;flex-wrap:wrap;gap:.35rem;margin:1.4rem 0 0}
+.tab{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;padding:.42rem .8rem;
+  background:transparent;color:var(--muted);border:1px solid var(--rule);border-radius:3px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.panel{border:1px solid var(--rule);border-radius:3px;background:var(--card);margin-top:-1px}
+.panel[hidden]{display:none!important}
+.panel .phead{padding:1rem 1.1rem .2rem}
+.panel .phead p{font-size:.92rem;color:var(--muted);margin:.3rem 0 .8rem;max-width:68ch}
+
+/* ---------- sesiones clave ---------- */
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:1rem;margin-top:1.2rem}
+.key{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:1.05rem 1.15rem;
+  border-top:3px solid var(--fuerza);display:flex;flex-direction:column;gap:.45rem}
+.key.k-nado{border-top-color:var(--nado)} .key.k-bici{border-top-color:var(--bici)}
+.key.k-corre{border-top-color:var(--corre)} .key.k-mix{border-top-color:var(--ink)}
+.key h4{margin:0;font-size:1.12rem}
+.key .pres{font-family:var(--mono);font-size:.9rem;background:var(--card2);border:1px solid var(--rule-soft);
+  border-radius:3px;padding:.55rem .65rem;line-height:1.5}
+.key p{margin:0;font-size:.9rem;color:var(--muted)}
+
+/* ---------- gates ---------- */
+.gate{display:grid;grid-template-columns:auto 1fr;gap:0 1.2rem;padding:1rem 0;border-bottom:1px solid var(--rule-soft)}
+.gate:last-child{border-bottom:0}
+.gate .when{font-family:var(--mono);font-weight:600;font-size:.95rem;white-space:nowrap;color:var(--bici)}
+.gate p{margin:.2rem 0 0;font-size:.94rem}
+
+.callout{border-left:3px solid var(--bici);background:var(--card);padding:1rem 1.2rem;margin:1.4rem 0;border-radius:0 3px 3px 0}
+.callout p:last-child{margin-bottom:0}
+ul.tight{margin:.4rem 0 1rem;padding-left:1.15rem}
+ul.tight li{margin-bottom:.4rem}
+footer{border-top:1px solid var(--rule);padding-top:1.4rem;color:var(--muted);font-size:.88rem}
+@media (max-width:720px){
+  .proj{grid-template-columns:1fr}
+  .proj-total{border-right:0;border-bottom:1px solid var(--rule);padding:0 0 1rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Ironman 70.3 · 28 feb – 1 mar 2027</span>
+    <h1>Sub-4 en<br><em>25 semanas</em></h1>
+    <p class="lede">Plan completo del 7 de septiembre al día de carrera, para 13–16 h semanales con piscina, potenciómetro y gimnasio. Introduce tus números en el calibrador y cada sesión de esta página pasa a estar en <em>tus</em> vatios y <em>tus</em> ritmos.</p>
+    <div class="factbar">
+      <div class="fact"><span class="k">Semanas</span><span class="v">25</span></div>
+      <div class="fact"><span class="k">Horas totales</span><span class="v">335</span></div>
+      <div class="fact"><span class="k">Objetivo</span><span class="v">3:59:59</span></div>
+      <div class="fact"><span class="k">Margen bici</span><span class="v">2:06</span></div>
+      <div class="fact"><span class="k">Margen carrera</span><span class="v">1:22</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <div class="shead"><h2>La aritmética manda</h2><span class="n">01</span></div>
+  <div class="col">
+    <p>Sub-4 en un 70.3 son <strong>240 minutos</strong> para 1,9 km de nado, 90 km de bici y 21,1 km de carrera, transiciones incluidas. Ese presupuesto es tan corto que casi no admite versiones: hay tres repartos razonables y todos exigen números de atleta de élite amateur. Conviene verlos antes de empezar a entrenar, porque son los que definen cada sesión del plan.</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <caption>Los tres repartos posibles. Ninguno deja margen: perder 4 minutos en bici obliga a recuperarlos corriendo a 3:42/km.</caption>
+      <thead><tr><th>Perfil</th><th class="n">Nado 1,9 k</th><th class="n">T1+T2</th><th class="n">Bici 90 k</th><th class="n">Carrera 21,1 k</th><th class="n">Total</th></tr></thead>
+      <tbody>
+        <tr><td>Nadador-ciclista</td><td class="n">28:00 <span style="color:var(--muted)">(1:28/100)</span></td><td class="n">4:00</td><td class="n">2:06 <span style="color:var(--muted)">(42,9 km/h)</span></td><td class="n">1:22 <span style="color:var(--muted)">(3:53/km)</span></td><td class="n hi">4:00</td></tr>
+        <tr><td>Corredor</td><td class="n">30:00 <span style="color:var(--muted)">(1:34/100)</span></td><td class="n">4:00</td><td class="n">2:10 <span style="color:var(--muted)">(41,5 km/h)</span></td><td class="n">1:16 <span style="color:var(--muted)">(3:36/km)</span></td><td class="n hi">4:00</td></tr>
+        <tr><td>Equilibrado</td><td class="n">29:00 <span style="color:var(--muted)">(1:31/100)</span></td><td class="n">4:00</td><td class="n">2:08 <span style="color:var(--muted)">(42,2 km/h)</span></td><td class="n">1:19 <span style="color:var(--muted)">(3:45/km)</span></td><td class="n hi">4:00</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Lo que cuesta el split de bici</h3>
+  <div class="col"><p>Aquí es donde se gana o se pierde el sub-4, y donde la posición aerodinámica vale tanto como el motor. Vatios necesarios en llano, a nivel del mar, para un sistema de 79 kg (ciclista de 70 kg más bici y equipo):</p></div>
+  <div class="tw">
+    <table>
+      <caption>Entre una posición de ruta (CdA 0,28) y una posición de contrarreloj optimizada (0,21) hay <strong>70–80 W</strong> de diferencia: el equivalente a un año de entrenamiento, ganado en un túnel de viento o con una buena sesión de bike fit.</caption>
+      <thead><tr><th>Split bici</th><th class="n">Velocidad</th><th class="n">CdA 0,28<br><span style="font-weight:400;text-transform:none;letter-spacing:0">ruta, manetas</span></th><th class="n">CdA 0,24<br><span style="font-weight:400;text-transform:none;letter-spacing:0">cabra, buena posición</span></th><th class="n">CdA 0,21<br><span style="font-weight:400;text-transform:none;letter-spacing:0">optimizada</span></th></tr></thead>
+      <tbody>
+        <tr><td class="n">2:03</td><td class="n">43,9 km/h</td><td class="n">351 W <span style="color:var(--muted)">· FTP 423</span></td><td class="n">307 W <span style="color:var(--muted)">· FTP 369</span></td><td class="n">273 W <span style="color:var(--muted)">· FTP 329</span></td></tr>
+        <tr><td class="n hi">2:06</td><td class="n">42,9 km/h</td><td class="n">329 W <span style="color:var(--muted)">· FTP 396</span></td><td class="n">287 W <span style="color:var(--muted)">· FTP 346</span></td><td class="n">256 W <span style="color:var(--muted)">· FTP 308</span></td></tr>
+        <tr><td class="n hi">2:10</td><td class="n">41,5 km/h</td><td class="n">301 W <span style="color:var(--muted)">· FTP 363</span></td><td class="n">264 W <span style="color:var(--muted)">· FTP 318</span></td><td class="n">235 W <span style="color:var(--muted)">· FTP 283</span></td></tr>
+        <tr><td class="n">2:15</td><td class="n">40,0 km/h</td><td class="n">272 W <span style="color:var(--muted)">· FTP 327</span></td><td class="n">238 W <span style="color:var(--muted)">· FTP 287</span></td><td class="n">213 W <span style="color:var(--muted)">· FTP 256</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout col">
+    <p><strong>Dicho sin rodeos:</strong> el sub-4 pide una FTP de <span class="mono">4,4–4,9 W/kg</span> y un medio maratón de <span class="mono">1:16–1:22</span> <em>después</em> de la bici, lo que equivale a un medio maratón en fresco de 1:12–1:18. Es tiempo de ganador de grupo de edad en la mayoría de circuitos. En 25 semanas se llega si ya estás cerca; si tu 70.3 anterior fue de 4:45 o más, el salto no cabe en seis meses y el plan trabaja igual, pero con la meta recalibrada. El calibrador de abajo te dice en cuál de los dos casos estás.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Calibrador</h2><span class="n">02</span></div>
+  <div class="col"><p>Introduce tus números actuales. La página calcula tus zonas, proyecta tu tiempo en carrera y reescribe todos los objetivos de las sesiones que vienen después. Si aún no tienes los datos, la semana 1 del plan es precisamente la de los tests.</p></div>
+
+  <div class="calib">
+    <div class="calib-in">
+      <div class="field">
+        <label for="ftp">FTP (W)</label>
+        <input id="ftp" type="number" min="100" max="500" step="1" value="285">
+        <span class="hint">Test de 20' × 0,95</span>
+      </div>
+      <div class="field">
+        <label for="peso">Peso (kg)</label>
+        <input id="peso" type="number" min="40" max="120" step="0.5" value="70">
+        <span class="hint">Se suman 9 kg de bici y equipo</span>
+      </div>
+      <div class="field">
+        <label for="cda">Posición</label>
+        <select id="cda">
+          <option value="0.28">Ruta, manetas · 0,28</option>
+          <option value="0.24" selected>Cabra, buena · 0,24</option>
+          <option value="0.21">Optimizada · 0,21</option>
+        </select>
+        <span class="hint">Coeficiente aerodinámico</span>
+      </div>
+      <div class="field">
+        <label for="css">CSS nado /100 m</label>
+        <input id="css" type="text" inputmode="numeric" value="1:35">
+        <span class="hint">(t400 − t200) ÷ 2</span>
+      </div>
+      <div class="field">
+        <label for="umbral">Umbral carrera /km</label>
+        <input id="umbral" type="text" inputmode="numeric" value="3:50">
+        <span class="hint">Ritmo medio de 30' a tope</span>
+      </div>
+      <div class="field">
+        <label for="neopreno">Neopreno</label>
+        <select id="neopreno"><option value="1">Sí, permitido</option><option value="0">No</option></select>
+        <span class="hint">Descuenta un 4 % en el nado</span>
+      </div>
+    </div>
+    <div class="proj">
+      <div class="proj-total">
+        <span class="eyebrow">Proyección a día de hoy</span>
+        <span class="big" id="p-total">—</span>
+        <span class="verdict" id="p-verdict">—</span>
+        <p class="proj-note" id="p-note"></p>
+      </div>
+      <div>
+        <div class="splits">
+          <div class="split s-nado"><span class="k">Nado 1,9 k</span><span class="t" id="p-nado">—</span><span class="d" id="p-nado-d"></span></div>
+          <div class="split s-bici"><span class="k">Bici 90 k</span><span class="t" id="p-bici">—</span><span class="d" id="p-bici-d"></span></div>
+          <div class="split s-corre"><span class="k">Carrera 21,1 k</span><span class="t" id="p-corre">—</span><span class="d" id="p-corre-d"></span></div>
+          <div class="split"><span class="k">Transiciones</span><span class="t">4:00</span><span class="d">fijas</span></div>
+        </div>
+        <p class="proj-note">La bici se proyecta a <span class="mono">83 %</span> de tu FTP (intensidad sostenible en un 70.3 sin arruinar la carrera a pie) y el ritmo a pie, a tu umbral <span class="mono">+22 s/km</span>, que es lo que cuesta correr con 2 horas de bici en las piernas.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Tus zonas</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Zona</th><th class="n">Bici</th><th class="n">Carrera /km</th><th class="n">Nado /100 m</th><th>Para qué</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Z1</strong> Recuperación</td><td class="n" data-w="0:0.55"></td><td class="n" data-run="75:110"></td><td class="n" data-swim="12:20"></td><td>Rodajes de descarga, vuelta a la calma</td></tr>
+        <tr><td><strong>Z2</strong> Base aeróbica</td><td class="n" data-w="0.56:0.75"></td><td class="n" data-run="45:75"></td><td class="n" data-swim="6:12"></td><td>El 70 % del volumen. Aquí se construye el motor</td></tr>
+        <tr><td><strong>Z3</strong> Tempo</td><td class="n" data-w="0.76:0.90"></td><td class="n" data-run="15:30"></td><td class="n" data-swim="2:6"></td><td>Ritmo de carrera de 70.3 y algo por encima</td></tr>
+        <tr><td><strong>Z4</strong> Umbral</td><td class="n" data-w="0.91:1.05"></td><td class="n" data-run="-5:5"></td><td class="n" data-swim="-1:1"></td><td>Sube el techo sostenible. El trabajo duro</td></tr>
+        <tr><td><strong>Z5</strong> VO₂ máx</td><td class="n" data-w="1.06:1.20"></td><td class="n" data-run="-22:-10"></td><td class="n" data-swim="-6:-3"></td><td>Dosis corta, sube el techo de arriba</td></tr>
+        <tr style="background:var(--card2)"><td><strong>Ritmo de carrera</strong> 70.3</td><td class="n hi" data-w="0.80:0.85"></td><td class="n hi" data-run="18:26"></td><td class="n hi" data-swim="2:4"></td><td>Lo que vas a sostener el día de la prueba</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Las 25 semanas</h2><span class="n">03</span></div>
+  <div class="col"><p>Cuatro bloques con descargas cada tres semanas. La carga sube en escalón, nunca en rampa continua: las semanas en blanco no son opcionales, son donde el cuerpo asimila lo anterior. Pasa el cursor por cada barra para ver la semana.</p></div>
+
+  <div class="load" id="load"></div>
+  <div class="load-x" id="loadx"></div>
+  <div class="legend">
+    <span><i style="background:var(--muted)"></i>Tests</span>
+    <span><i style="background:var(--nado)"></i>Base</span>
+    <span><i style="background:var(--corre)"></i>Construcción</span>
+    <span><i style="background:var(--bici)"></i>Específico</span>
+    <span><i style="background:var(--rule);border:1px solid var(--muted)"></i>Descarga</span>
+    <span><i style="background:repeating-linear-gradient(45deg,var(--bici),var(--bici) 3px,transparent 3px,transparent 6px);border:1px solid var(--bici)"></i>Afinado</span>
+  </div>
+
+  <div class="tw" style="margin-top:2rem">
+    <table id="weeks">
+      <thead><tr><th class="n">Sem</th><th class="n">Fechas</th><th>Bloque</th><th class="n">Horas</th><th>Foco de la semana</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Semana tipo</h2><span class="n">04</span></div>
+  <div class="col"><p>La estructura se repite dentro de cada bloque; lo que cambia es la intensidad y la duración de las sesiones clave. Los objetivos numéricos salen de tu calibrador.</p></div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" aria-controls="p-base" id="t-base">Base · 15 h</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="p-constr" id="t-constr">Construcción · 16 h</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="p-espec" id="t-espec">Específico · 16 h</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="p-taper" id="t-taper">Afinado · 11 h</button>
+  </div>
+
+  <div class="panel" id="p-base" role="tabpanel" aria-labelledby="t-base">
+    <div class="phead"><h4 style="margin-top:.4rem">Semanas 2–8 · construir el motor</h4>
+    <p>Volumen aeróbico y fuerza máxima en gimnasio. Casi nada de intensidad alta: lo que se busca es la base sobre la que se apoyará todo lo demás, y llegar a noviembre sin lesiones.</p></div>
+    <div class="tw" style="margin:0;border:0;border-top:1px solid var(--rule);border-radius:0"><table>
+      <thead><tr><th>Día</th><th>Sesión 1</th><th>Sesión 2</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Lun</strong></td><td><span class="chip c-fuerza">Fuerza</span> 60' fuerza máxima: sentadilla, peso muerto, zancada búlgara. 4×5 al 80–85 %</td><td><span class="chip c-nado">Nado</span> 45' técnica: 12×50 con palas y pull, foco en el agarre</td></tr>
+        <tr><td><strong>Mar</strong></td><td><span class="chip c-bici">Bici</span> 1:30 con 4×8' a <span class="num" data-w="0.88:0.92"></span> a 60–70 rpm, r4'</td><td><span class="chip c-corre">Carrera</span> 20' de transición a <span class="num" data-run="45:75"></span></td></tr>
+        <tr><td><strong>Mié</strong></td><td><span class="chip c-nado">Nado</span> 1:15: 20×50 a <span class="num" data-swim="2:6"></span> r10", + 6×100 a <span class="num" data-swim="-1:1"></span></td><td><span class="chip c-corre">Carrera</span> 1:00 a <span class="num" data-run="45:75"></span> + 8×20" de zancadas</td></tr>
+        <tr><td><strong>Jue</strong></td><td><span class="chip c-bici">Bici</span> 1:45 continuo a <span class="num" data-w="0.56:0.75"></span></td><td><span class="chip c-fuerza">Fuerza</span> 45': dominadas, remo, core antirrotación</td></tr>
+        <tr><td><strong>Vie</strong></td><td><span class="chip c-nado">Nado</span> 1:00 velocidad: 16×25 máximos r20"</td><td>Descanso</td></tr>
+        <tr><td><strong>Sáb</strong></td><td><span class="chip c-bici">Bici</span> 3:30 a <span class="num" data-w="0.56:0.75"></span> con 3×15' a <span class="num" data-w="0.76:0.90"></span></td><td><span class="chip c-corre">Carrera</span> 15' de ladrillo a <span class="num" data-run="45:75"></span></td></tr>
+        <tr><td><strong>Dom</strong></td><td><span class="chip c-corre">Carrera</span> 1:30 larga a <span class="num" data-run="45:75"></span>, terreno ondulado</td><td>—</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="panel" id="p-constr" role="tabpanel" aria-labelledby="t-constr" hidden>
+    <div class="phead"><h4 style="margin-top:.4rem">Semanas 10–17 · subir el techo</h4>
+    <p>Entra el trabajo de umbral, que es lo que mueve la FTP y el ritmo de carrera. La fuerza baja a mantenimiento para que las piernas lleguen frescas a las sesiones que importan.</p></div>
+    <div class="tw" style="margin:0;border:0;border-top:1px solid var(--rule);border-radius:0"><table>
+      <thead><tr><th>Día</th><th>Sesión 1</th><th>Sesión 2</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Lun</strong></td><td><span class="chip c-nado">Nado</span> 1:00 técnica y suave</td><td><span class="chip c-fuerza">Fuerza</span> 50' fuerza máxima + pliometría ligera</td></tr>
+        <tr><td><strong>Mar</strong></td><td><span class="chip c-bici">Bici</span> 1:45 con <strong>4×10' a <span class="num" data-w="1.00:1.05"></span></strong> r5'</td><td><span class="chip c-corre">Carrera</span> 20' de ladrillo a <span class="num" data-run="18:26"></span></td></tr>
+        <tr><td><strong>Mié</strong></td><td><span class="chip c-corre">Carrera</span> 1:10 con <strong>5×1000 m a <span class="num" data-run="-5:5"></span></strong> r90"</td><td><span class="chip c-nado">Nado</span> 1:00 aeróbico a <span class="num" data-swim="6:12"></span></td></tr>
+        <tr><td><strong>Jue</strong></td><td><span class="chip c-bici">Bici</span> 2:00 a <span class="num" data-w="0.56:0.75"></span> con 2×20' a <span class="num" data-w="0.76:0.90"></span></td><td><span class="chip c-fuerza">Fuerza</span> 40' mantenimiento</td></tr>
+        <tr><td><strong>Vie</strong></td><td><span class="chip c-nado">Nado</span> 1:15: 3×400 a <span class="num" data-swim="-1:1"></span> r45"</td><td><span class="chip c-corre">Carrera</span> 45' fácil a <span class="num" data-run="45:75"></span></td></tr>
+        <tr><td><strong>Sáb</strong></td><td><span class="chip c-bici">Bici</span> 4:00 con <strong>3×20' a <span class="num" data-w="0.85:0.90"></span></strong> r10'</td><td><span class="chip c-corre">Carrera</span> 30' de ladrillo a <span class="num" data-run="18:26"></span></td></tr>
+        <tr><td><strong>Dom</strong></td><td><span class="chip c-corre">Carrera</span> 1:40 larga, últimos 20' a <span class="num" data-run="18:26"></span></td><td>—</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="panel" id="p-espec" role="tabpanel" aria-labelledby="t-espec" hidden>
+    <div class="phead"><h4 style="margin-top:.4rem">Semanas 18–23 · ensayar la carrera</h4>
+    <p>Todo se vuelve específico: watts de carrera en posición aero, ritmo de carrera con las piernas cargadas, nutrición real. A partir de aquí, cada sábado es un ensayo general.</p></div>
+    <div class="tw" style="margin:0;border:0;border-top:1px solid var(--rule);border-radius:0"><table>
+      <thead><tr><th>Día</th><th>Sesión 1</th><th>Sesión 2</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Lun</strong></td><td><span class="chip c-nado">Nado</span> 1:00 suave</td><td><span class="chip c-fuerza">Fuerza</span> 40' mantenimiento, sin llegar al fallo</td></tr>
+        <tr><td><strong>Mar</strong></td><td><span class="chip c-bici">Bici</span> 2:00 con <strong>2×30' a <span class="num" data-w="0.83:0.87"></span></strong> sin salir de la posición aero</td><td><span class="chip c-corre">Carrera</span> 15' de ladrillo</td></tr>
+        <tr><td><strong>Mié</strong></td><td><span class="chip c-corre">Carrera</span> 1:15 con <strong>4×2 km a <span class="num" data-run="18:26"></span></strong> r2'</td><td><span class="chip c-nado">Nado</span> 1:00 a <span class="num" data-swim="2:6"></span></td></tr>
+        <tr><td><strong>Jue</strong></td><td><span class="chip c-bici">Bici</span> 1:30 suave a <span class="num" data-w="0.56:0.75"></span></td><td><span class="chip c-nado">Nado</span> 1:15 en aguas abiertas: salidas y 4×400 con giros de boya</td></tr>
+        <tr><td><strong>Vie</strong></td><td>Descanso o <span class="chip c-nado">Nado</span> 45' regenerativo</td><td>—</td></tr>
+        <tr><td><strong>Sáb</strong></td><td colspan="2"><strong>Ladrillo clave.</strong> <span class="chip c-bici">Bici</span> 90 km a <span class="num" data-w="0.80:0.85"></span> con la nutrición de carrera → <span class="chip c-corre">Carrera</span> 45' a <span class="num" data-run="18:26"></span> saliendo en frío de T2</td></tr>
+        <tr><td><strong>Dom</strong></td><td><span class="chip c-corre">Carrera</span> 1:45 con 3×15' a <span class="num" data-run="18:26"></span> r5'</td><td>—</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="panel" id="p-taper" role="tabpanel" aria-labelledby="t-taper" hidden>
+    <div class="phead"><h4 style="margin-top:.4rem">Semanas 24–25 · llegar afilado, no cansado</h4>
+    <p>El volumen cae un 40 % y luego un 60 %, pero la intensidad se mantiene: se recortan las series, no el ritmo. El error clásico del afinado es descansar de más y llegar plano.</p></div>
+    <div class="tw" style="margin:0;border:0;border-top:1px solid var(--rule);border-radius:0"><table>
+      <thead><tr><th>Día</th><th>Semana 24 · 11 h</th><th>Semana 25 · carrera</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Lun</strong></td><td><span class="chip c-nado">Nado</span> 50' + <span class="chip c-fuerza">Fuerza</span> 30' movilidad</td><td>Descanso total</td></tr>
+        <tr><td><strong>Mar</strong></td><td><span class="chip c-bici">Bici</span> 1:30 con 3×12' a <span class="num" data-w="0.85:0.90"></span></td><td><span class="chip c-bici">Bici</span> 1:00 con 4×3' a <span class="num" data-w="0.85:0.90"></span></td></tr>
+        <tr><td><strong>Mié</strong></td><td><span class="chip c-corre">Carrera</span> 1:00 con 4×1 km a <span class="num" data-run="-5:5"></span> + <span class="chip c-nado">Nado</span> 1:00</td><td><span class="chip c-corre">Carrera</span> 35' con 5×1' a <span class="num" data-run="18:26"></span></td></tr>
+        <tr><td><strong>Jue</strong></td><td><span class="chip c-bici">Bici</span> 1:45 a <span class="num" data-w="0.56:0.75"></span></td><td><span class="chip c-nado">Nado</span> 30' suave. Viaje y registro</td></tr>
+        <tr><td><strong>Vie</strong></td><td><span class="chip c-nado">Nado</span> 1:00 + <span class="chip c-corre">Carrera</span> 30'</td><td><span class="chip c-bici">Bici</span> 30' con 3×2' a ritmo. Revisión de material</td></tr>
+        <tr><td><strong>Sáb</strong></td><td><span class="chip c-bici">Bici</span> 2:30 con 2×20' a <span class="num" data-w="0.83:0.87"></span> + 20' de ladrillo</td><td><span class="chip c-corre">Carrera</span> 20' muy suave con 4×20" a ritmo. Piernas arriba</td></tr>
+        <tr><td><strong>Dom</strong></td><td><span class="chip c-corre">Carrera</span> 1:10 con 20' a ritmo objetivo</td><td><strong>CARRERA</strong></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Las sesiones que deciden</h2><span class="n">05</span></div>
+  <div class="col"><p>De las 335 horas del plan, estas siete sesiones son las que mueven la aguja. Si una semana se complica, se recortan las demás y estas se protegen.</p></div>
+  <div class="keys">
+    <div class="key k-bici">
+      <h4>3 × 20' al 88 %</h4>
+      <div class="pres">Sáb · <span data-w="0.85:0.90"></span> · r10'<br>Dentro del rodaje largo, en aero</div>
+      <p>El motor del split de bici. Sostener 60 minutos acumulados justo por debajo del umbral es lo que convierte 2:15 en 2:08.</p>
+    </div>
+    <div class="key k-mix">
+      <h4>Ladrillo 90/45</h4>
+      <div class="pres">Sáb · 90 km a <span data-w="0.80:0.85"></span><br>+ 45' a <span data-run="18:26"></span></div>
+      <p>El ensayo completo, nutrición incluida. Si aquí el ritmo se cae en el minuto 25, tu objetivo de bici es demasiado agresivo.</p>
+    </div>
+    <div class="key k-corre">
+      <h4>5 × 1000 al umbral</h4>
+      <div class="pres">Mié · <span data-run="-5:5"></span> · r90"</div>
+      <p>Sube el techo de carrera. Todo el ritmo de 70.3 se calcula desde este número, así que subirlo mueve el resto.</p>
+    </div>
+    <div class="key k-corre">
+      <h4>4 × 2 km a ritmo objetivo</h4>
+      <div class="pres">Mié, bloque específico<br><span data-run="18:26"></span> · r2'</div>
+      <p>Enseña a las piernas cuál es el ritmo del día de carrera para que salgas de T2 sin tener que pensarlo.</p>
+    </div>
+    <div class="key k-bici">
+      <h4>2 × 30' en aero</h4>
+      <div class="pres">Mar · <span data-w="0.83:0.87"></span><br>Sin salir de la posición</div>
+      <p>Tanto de posición como de potencia: los watts no sirven si no puedes sostener la postura 2 horas sin subir la cabeza.</p>
+    </div>
+    <div class="key k-nado">
+      <h4>3 × 400 a CSS</h4>
+      <div class="pres">Vie · <span data-swim="-1:1"></span> · r45"</div>
+      <p>La sesión que baja el ritmo umbral de nado. Dos minutos ganados aquí valen tanto como 10 W en la bici.</p>
+    </div>
+    <div class="key k-mix">
+      <h4>Simulacro de carrera</h4>
+      <div class="pres">Semana 22, sábado<br>1,9 km + 60 km + 12 km<br>a ritmo de carrera</div>
+      <p>Ensayo general con material, nutrición y transiciones reales. Es también el último test antes de fijar los objetivos definitivos.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Nutrición y ritmo de carrera</h2><span class="n">06</span></div>
+  <div class="col">
+    <p>A esta intensidad, la nutrición deja de ser un detalle: el sub-4 se pierde tantas veces por el estómago como por las piernas. Todo lo de abajo se ensaya desde la semana 10 en cada ladrillo, nunca se estrena el día de la carrera.</p>
+    <h4>Durante</h4>
+    <ul class="tight">
+      <li><strong>Bici:</strong> 90–100 g de hidratos por hora, en mezcla de glucosa y fructosa 2:1 o 1:0,8. El intestino se entrena: empieza en 60 g/h y sube 10 g cada dos semanas.</li>
+      <li><strong>Carrera:</strong> 60–70 g/h, en gel o líquido. Nada sólido a partir de T2.</li>
+      <li><strong>Sodio:</strong> 600–900 mg/h. Súbelo a 1.000–1.200 si la carrera es calurosa o sudas mucho.</li>
+      <li><strong>Líquido:</strong> 500–750 ml/h en bici. Pésate antes y después de dos ladrillos largos para ajustar tu tasa real de sudoración.</li>
+    </ul>
+    <h4>Ritmo el día de la carrera</h4>
+    <ul class="tight">
+      <li><strong>Nado:</strong> 200 m fuertes para coger pies, y a partir de ahí a <span class="num" data-swim="2:4"></span> sin negociar.</li>
+      <li><strong>Bici:</strong> los primeros 15 minutos, 15 W por debajo del objetivo aunque las piernas pidan más. Después, potencia normalizada de <span class="num" data-w="0.80:0.85"></span> con un índice de variabilidad por debajo de 1,05: en llano no hay picos, en las subidas no pasas de <span class="num" data-w="0.95:1.00"></span>.</li>
+      <li><strong>Carrera:</strong> los 3 primeros kilómetros a ritmo objetivo <em>más</em> 8 s/km —salen solos y es donde se arruina el sub-4—, luego <span class="num" data-run="18:26"></span> hasta el kilómetro 16, y lo que quede a partir de ahí.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Puertas de decisión</h2><span class="n">07</span></div>
+  <div class="col"><p>Un plan de seis meses tiene que poder corregirse. En estas cuatro fechas se vuelve a medir y, si los números no acompañan, el objetivo se recalibra sin dramatismo: llegar al día de la carrera con una meta imposible es la mejor forma de reventar en el kilómetro 12 del medio maratón.</p></div>
+  <div style="margin-top:1rem">
+    <div class="gate"><span class="when">Sem 1<br>7 sep</span><div><strong>Tests de calibración.</strong><p>FTP con test de 20', 30' de carrera a tope, y 400 + 200 m en piscina para el CSS. Estos números fijan todas las zonas del plan y son el punto de partida contra el que se compara todo lo demás.</p></div></div>
+    <div class="gate"><span class="when">Sem 9<br>2 nov</span><div><strong>Primer control.</strong><p>Se repiten los tres tests. Lo esperable tras siete semanas de base: <span class="mono">+4 a +7 %</span> de FTP y <span class="mono">−5 a −10 s/km</span> de umbral en carrera. Si la mejora es menor y las sesiones se han cumplido, el problema suele ser el descanso o la alimentación diaria, no el plan.</p></div></div>
+    <div class="gate"><span class="when">Sem 17<br>28 dic</span><div><strong>La puerta que decide el objetivo.</strong><p>Con los tests de esta semana, la proyección del calibrador debe estar por debajo de <span class="mono">4:05</span> para mantener el sub-4. Entre <span class="mono">4:05 y 4:15</span>, el objetivo pasa a sub-4:10 y las sesiones específicas se recalculan a esos ritmos. Por encima de <span class="mono">4:15</span>, el objetivo del año es una marca personal amplia y el sub-4 se traslada a la temporada siguiente, que es cuando de verdad cabe.</p></div></div>
+    <div class="gate"><span class="when">Sem 21<br>25–31 ene</span><div><strong>Carrera de preparación.</strong><p>Un olímpico a tope o un medio con la bici controlada, cinco semanas antes. Sirve para probar transiciones, nutrición y cabeza en competición real, y para validar la proyección con un dato de carrera y no de entrenamiento.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Lo que me falta saber</h2><span class="n">08</span></div>
+  <div class="col">
+    <p>El plan ya es ejecutable tal cual: empieza la semana del 7 de septiembre por los tests. Pero con estos siete datos lo afino y dejo de asumir cosas:</p>
+    <ol class="tight">
+      <li><strong>Los parciales de tu 70.3 anterior</strong> —nado, bici, carrera por separado— y en qué circuito. Es el dato que más cambia el plan.</li>
+      <li><strong>Qué carrera es la del 1 de marzo.</strong> El perfil manda: 900 m de desnivel positivo cambian los vatios objetivo y todo el reparto de tiempos.</li>
+      <li><strong>Tu FTP actual y tu peso</strong>, si ya los tienes medidos.</li>
+      <li><strong>Tu mejor 5 km o 10 km reciente</strong>, para no depender solo del test de 30'.</li>
+      <li><strong>Tu ritmo cómodo por 100 m</strong> y cuántos años llevas nadando.</li>
+      <li><strong>Lesiones o zonas delicadas</strong>, y el historial de las que ya has tenido.</li>
+      <li><strong>La fecha exacta.</strong> El 1 de marzo de 2027 cae en lunes, así que he montado el plan para competir el domingo 28 de febrero. Si la carrera es otro día, se desplaza todo un bloque.</li>
+    </ol>
+    <p>Con eso te devuelvo la versión definitiva: mismas 25 semanas, pero con los vatios y ritmos cerrados sesión a sesión y el reparto de tiempos ajustado a tu circuito.</p>
+  </div>
+</section>
+
+<footer class="col">
+  <p>Plan construido para 13–16 h semanales con acceso a piscina, potenciómetro, pulsómetro y gimnasio. Los cálculos de potencia asumen llano a nivel del mar, densidad del aire 1,20 kg/m³, coeficiente de rodadura 0,004 y 97,5 % de rendimiento en la transmisión. Ajusta las cargas si aparece dolor: ninguna sesión de este plan vale una lesión a seis meses de la carrera.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var SEM = [
+    [1,"7–13 sep","test","Test",12,"Tests de FTP, 30' de carrera y CSS. Calibración de todas las zonas"],
+    [2,"14–20 sep","base","Base 1",13,"Volumen aeróbico. Entra la fuerza máxima en gimnasio"],
+    [3,"21–27 sep","base","Base 1",14,"Sube el rodaje largo de bici a 3:30. Cadencia baja en llano"],
+    [4,"28 sep–4 oct","base","Base 1",15,"Primera semana completa de carga. Fuerza-resistencia en bici"],
+    [5,"5–11 oct","descarga","Descarga",9,"Asimilación. Se mantienen las series, se recorta el volumen"],
+    [6,"12–18 oct","base","Base 2",14,"Vuelve la carga con un poco de tempo en las tres disciplinas"],
+    [7,"19–25 oct","base","Base 2",15,"Carrera larga a 1:45. Nado con series de 400"],
+    [8,"26 oct–1 nov","base","Base 2",16,"Pico del bloque de base: la semana más larga hasta ahora"],
+    [9,"2–8 nov","descarga","Descarga + test",10,"Se repiten los tres tests. Primera puerta de decisión"],
+    [10,"9–15 nov","constr","Construcción 1",15,"Entra el umbral: 4×10' en bici y 5×1000 en carrera"],
+    [11,"16–22 nov","constr","Construcción 1",16,"Empieza el ensayo de nutrición en los rodajes largos"],
+    [12,"23–29 nov","constr","Construcción 1",16,"Bloque de 3×20' en bici. Ladrillos de 30'"],
+    [13,"30 nov–6 dic","descarga","Descarga",10,"Asimilación sin perder intensidad"],
+    [14,"7–13 dic","constr","Construcción 2",15,"Se añade VO₂ máx en bici: 6×3' cortos y duros"],
+    [15,"14–20 dic","constr","Construcción 2",16,"Semana más dura del bloque. Ladrillo de 4 h"],
+    [16,"21–27 dic","descarga","Descarga navideña",9,"Semana ligera y flexible. Mantén tres sesiones de calidad"],
+    [17,"28 dic–3 ene","constr","Construcción 2 + test",14,"Tests otra vez. Aquí se decide si el objetivo sigue siendo sub-4"],
+    [18,"4–10 ene","espec","Específico 1",16,"Todo pasa a ritmo de carrera. 2×30' en posición aero"],
+    [19,"11–17 ene","espec","Específico 1",16,"Primer ladrillo 90/45 completo con nutrición de carrera"],
+    [20,"18–24 ene","espec","Específico 1",15,"4×2 km a ritmo objetivo. Nado en aguas abiertas"],
+    [21,"25–31 ene","descarga","Descarga + competición",11,"Carrera de preparación: olímpico a tope o medio controlado"],
+    [22,"1–7 feb","espec","Específico 2",16,"Simulacro de carrera el sábado. Semana pico del plan"],
+    [23,"8–14 feb","espec","Específico 2",15,"Última semana de carga. Se cierra material y estrategia"],
+    [24,"15–21 feb","taper","Afinado",11,"Cae el volumen un 40 %, la intensidad se mantiene"],
+    [25,"22–28 feb","taper","Carrera",6,"Sesiones cortas y afiladas. Domingo: 3:59:59"]
+  ];
+
+  // --- carga semanal
+  var maxH = 16, load = document.getElementById("load"), loadx = document.getElementById("loadx");
+  SEM.forEach(function(s){
+    var bar = document.createElement("div");
+    bar.className = "bar"; bar.setAttribute("data-b", s[2]);
+    bar.title = "Semana " + s[0] + " · " + s[1] + " · " + s[3] + " · " + s[4] + " h";
+    bar.innerHTML = '<b>' + s[4] + '</b><i style="height:' + Math.round(s[4] / maxH * 100) + '%"></i>';
+    load.appendChild(bar);
+    var x = document.createElement("span"); x.textContent = s[0]; loadx.appendChild(x);
+  });
+
+  // --- tabla de semanas
+  var tb = document.querySelector("#weeks tbody");
+  SEM.forEach(function(s){
+    var tr = document.createElement("tr");
+    if (s[2] === "descarga" || s[2] === "taper") tr.style.background = "var(--card2)";
+    tr.innerHTML = '<td class="n"><strong>' + s[0] + '</strong></td><td class="n">' + s[1] +
+      '</td><td>' + s[3] + '</td><td class="n">' + s[4] + ' h</td><td>' + s[5] + '</td>';
+    tb.appendChild(tr);
+  });
+
+  // --- utilidades
+  function parsePace(t){
+    var m = String(t).trim().match(/^(\d+)[:.'](\d{1,2})$/);
+    if (m) return parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
+    var n = parseFloat(t);
+    return isFinite(n) && n > 0 ? n : NaN;
+  }
+  function fmtPace(s){
+    if (!isFinite(s) || s <= 0) return "—";
+    s = Math.round(s);
+    return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  }
+  function fmtTime(s){
+    if (!isFinite(s) || s <= 0) return "—";
+    s = Math.round(s);
+    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60);
+    return h + ":" + String(m).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
+  }
+  function fmtMin(s){
+    s = Math.round(s);
+    return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  }
+  function wattsFor(kmh, cda, kg){
+    var rho = 1.20, g = 9.81, crr = 0.004, eff = 0.975, v = kmh / 3.6;
+    return (0.5 * rho * cda * v * v * v + crr * kg * g * v) / eff;
+  }
+  function speedFor(w, cda, kg){
+    var lo = 5, hi = 70, mid;
+    for (var i = 0; i < 60; i++){
+      mid = (lo + hi) / 2;
+      if (wattsFor(mid, cda, kg) < w) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  var IN = ["ftp", "peso", "cda", "css", "umbral", "neopreno"].map(function(id){
+    return document.getElementById(id);
+  });
+  var KEY = "sub4-calibrador-v1";
+
+  function leer(){
+    return {
+      ftp: parseFloat(IN[0].value) || 0,
+      peso: parseFloat(IN[1].value) || 0,
+      cda: parseFloat(IN[2].value),
+      css: parsePace(IN[3].value),
+      umbral: parsePace(IN[4].value),
+      neo: IN[5].value === "1"
+    };
+  }
+
+  function rango(a, b, fn){
+    var x = fn(a), y = fn(b);
+    return x === y ? x : x + "–" + y;
+  }
+
+  function pintar(){
+    var d = leer(), ok = d.ftp > 0 && d.peso > 0 && isFinite(d.css) && isFinite(d.umbral);
+    var kg = d.peso + 9;
+
+    document.querySelectorAll("[data-w]").forEach(function(el){
+      var p = el.getAttribute("data-w").split(":");
+      el.textContent = ok
+        ? rango(parseFloat(p[0]), parseFloat(p[1]), function(f){ return Math.round(d.ftp * f); }) + " W"
+        : "—";
+    });
+    document.querySelectorAll("[data-run]").forEach(function(el){
+      var p = el.getAttribute("data-run").split(":");
+      el.textContent = ok
+        ? rango(parseFloat(p[0]), parseFloat(p[1]), function(o){ return fmtPace(d.umbral + o); })
+        : "—";
+    });
+    document.querySelectorAll("[data-swim]").forEach(function(el){
+      var p = el.getAttribute("data-swim").split(":");
+      el.textContent = ok
+        ? rango(parseFloat(p[0]), parseFloat(p[1]), function(o){ return fmtPace(d.css + o); })
+        : "—";
+    });
+
+    var q = function(id){ return document.getElementById(id); };
+    if (!ok){
+      ["p-total", "p-nado", "p-bici", "p-corre"].forEach(function(i){ q(i).textContent = "—"; });
+      q("p-verdict").textContent = "Faltan datos";
+      q("p-verdict").className = "verdict";
+      q("p-note").textContent = "Completa los seis campos para ver la proyección.";
+      return;
+    }
+
+    var tNado = (d.css + 3) * 19 * (d.neo ? 0.96 : 1);
+    var wObj = d.ftp * 0.83;
+    var kmh = speedFor(wObj, d.cda, kg);
+    var tBici = 90 / kmh * 3600;
+    var paceCorre = d.umbral + 22;
+    var tCorre = paceCorre * 21.0975;
+    var total = tNado + 240 + tBici + tCorre;
+
+    q("p-nado").textContent = fmtMin(tNado);
+    q("p-nado-d").textContent = fmtPace(tNado / 19) + "/100 m";
+    q("p-bici").textContent = fmtMin(tBici);
+    q("p-bici-d").textContent = kmh.toFixed(1) + " km/h · " + Math.round(wObj) + " W";
+    q("p-corre").textContent = fmtMin(tCorre);
+    q("p-corre-d").textContent = fmtPace(paceCorre) + "/km";
+    q("p-total").textContent = fmtTime(total);
+
+    var v = q("p-verdict"), nota = q("p-note"), falta = total - 14400;
+    if (total <= 14400){
+      v.textContent = "Sub-4 al alcance"; v.className = "verdict v-ok";
+      nota.textContent = "Con estos números ya proyectas por debajo de 4 horas. El plan sirve para consolidarlo y llegar con margen.";
+    } else if (falta <= 900){
+      v.textContent = "A " + fmtMin(falta) + " del objetivo"; v.className = "verdict v-mid";
+      nota.textContent = "Distancia recuperable en 25 semanas: es exactamente el salto que este plan está diseñado para dar. La puerta de la semana 17 lo confirmará.";
+    } else if (falta <= 2700){
+      v.textContent = "A " + fmtMin(falta) + " del objetivo"; v.className = "verdict v-mid";
+      nota.textContent = "Salto grande pero no imposible si vienes de una base sólida. Prepárate para que la puerta de la semana 17 recalibre el objetivo hacia sub-4:10.";
+    } else {
+      v.textContent = "A " + fmtMin(falta) + " del objetivo"; v.className = "verdict v-no";
+      nota.textContent = "El sub-4 no cabe en 25 semanas desde aquí. Haz este plan igualmente con el objetivo de una marca personal amplia: es el año de base que hace posible el sub-4 en la temporada siguiente.";
+    }
+
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+
+  try {
+    var g = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (g){
+      if (g.ftp) IN[0].value = g.ftp;
+      if (g.peso) IN[1].value = g.peso;
+      if (g.cda) IN[2].value = g.cda;
+      if (g.css) IN[3].value = fmtPace(g.css);
+      if (g.umbral) IN[4].value = fmtPace(g.umbral);
+      IN[5].value = g.neo ? "1" : "0";
+    }
+  } catch (e) {}
+
+  IN.forEach(function(el){
+    el.addEventListener("input", pintar);
+    el.addEventListener("change", pintar);
+  });
+  pintar();
+
+  // --- pestañas
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+  tabs.forEach(function(tab){
+    tab.addEventListener("click", function(){
+      tabs.forEach(function(t){
+        var sel = t === tab;
+        t.setAttribute("aria-selected", sel ? "true" : "false");
+        document.getElementById(t.getAttribute("aria-controls")).hidden = !sel;
+      });
+    });
+  });
+})();
+</script>
