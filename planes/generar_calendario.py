@@ -286,7 +286,7 @@ def escribir_ics(filas: list[dict], ruta: Path) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Genera el calendario del plan de 25 semanas.")
-    ap.add_argument("--ftp", type=int, default=223, help="FTP en vatios (test de 20' × 0,95)")
+    ap.add_argument("--ftp", type=int, default=212, help="FTP en vatios (test de 20' × 0,95)")
     ap.add_argument("--css", default="2:20", help="CSS de nado por 100 m")
     ap.add_argument("--umbral", default="5:30", help="Ritmo umbral de carrera por km")
     ap.add_argument("--peso", type=float, default=90, help="Peso corporal actual en kg")
