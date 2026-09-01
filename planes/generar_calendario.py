@@ -195,15 +195,40 @@ def escribir_ics(filas: list[dict], ruta: Path) -> None:
     sello = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
     out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//find-skill//plan 70.3//ES",
            "CALSCALE:GREGORIAN", "X-WR-CALNAME:Plan 70.3 · camino al 4:04"]
-    vistas: dict[str, int] = {}
+    # la sesión más larga del día va por la tarde, que es cuando entrenas;
+    # la secundaria por la mañana. Los ladrillos son la excepción: van pegados
+    # a la bici, porque salir a correr en frío no entrena lo mismo.
+    por_dia: dict[str, list[int]] = {}
+    for i, f in enumerate(filas):
+        if f["minutos"]:
+            por_dia.setdefault(f["fecha"], []).append(i)
+
+    inicios: dict[int, datetime] = {}
+    for fecha, indices in por_dia.items():
+        dia = datetime.fromisoformat(fecha)
+        # un ladrillo es la CARRERA que sigue a la bici, no la bici en sí
+        ladrillos = [j for j in indices
+                     if filas[j]["disciplina"] == "Carrera" and "Ladrillo" in filas[j]["sesion"]]
+        resto = [j for j in indices if j not in ladrillos]
+        principal = max(resto or indices, key=lambda j: filas[j]["minutos"])
+
+        # entre semana la principal va por la tarde; el fin de semana, por la
+        # mañana, porque un rodaje de 3:45 no cabe después de comer
+        finde = dia.weekday() >= 5
+        inicios[principal] = dia.replace(hour=8 if finde else 18, minute=0)
+        fin_principal = inicios[principal] + timedelta(minutes=filas[principal]["minutos"])
+        for j in ladrillos:                                  # justo al bajar de la bici
+            inicios[j] = fin_principal + timedelta(minutes=5)
+            fin_principal = inicios[j] + timedelta(minutes=filas[j]["minutos"] + 5)
+        for j in resto:                                      # la segunda sesión
+            if j != principal:
+                inicios[j] = dia.replace(hour=17, minute=0) if finde \
+                    else dia.replace(hour=6, minute=30)
+
     for i, f in enumerate(filas):
         if not f["minutos"]:
             continue
-        # primera sesión del día por la mañana, segunda por la tarde
-        orden = vistas.get(f["fecha"], 0)
-        vistas[f["fecha"]] = orden + 1
-        hora = 7 if orden == 0 else 18
-        ini = datetime.fromisoformat(f["fecha"]).replace(hour=hora, minute=0)
+        ini = inicios[i]
         fin = ini + timedelta(minutes=f["minutos"])
         titulo = f"{ICONO.get(f['disciplina'], '')} {f['disciplina']} · {f['sesion']}"
         if f["objetivo"]:
@@ -227,9 +252,10 @@ def escribir_ics(filas: list[dict], ruta: Path) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Genera el calendario del plan de 25 semanas.")
-    ap.add_argument("--ftp", type=int, default=215, help="FTP en vatios (test de 20' × 0,95)")
+    ap.add_argument("--ftp", type=int, default=223, help="FTP en vatios (test de 20' × 0,95)")
     ap.add_argument("--css", default="2:20", help="CSS de nado por 100 m")
     ap.add_argument("--umbral", default="5:30", help="Ritmo umbral de carrera por km")
+    ap.add_argument("--peso", type=float, default=90, help="Peso corporal en kg (solo informativo)")
     ap.add_argument("--salida", default=".", help="Carpeta donde escribir los ficheros")
     a = ap.parse_args()
 
@@ -240,7 +266,9 @@ def main() -> None:
     escribir_ics(filas, destino / "plan-70.3.ics")
 
     horas = sum(f["minutos"] for f in filas) / 60
+    fuerza = sum(1 for f in filas if f["disciplina"] == "Fuerza")
     print(f"{len(filas)} sesiones · {horas:.0f} h · {SEMANAS[0][0]}–{SEMANAS[-1][0]} semanas")
+    print(f"  fuerza: {fuerza} sesiones en 25 semanas ({fuerza / 25:.1f} por semana)")
     print(f"  {destino / 'plan-70.3.csv'}")
     print(f"  {destino / 'plan-70.3.ics'}")
 
