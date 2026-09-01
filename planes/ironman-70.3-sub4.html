@@ -97,7 +97,9 @@ caption{caption-side:bottom;text-align:left;padding:.7rem .9rem;font-size:.85rem
 .split.s-nado{border-color:var(--nado)} .split.s-bici{border-color:var(--bici)} .split.s-corre{border-color:var(--corre)}
 .split .k{font-family:var(--display);text-transform:uppercase;letter-spacing:.11em;font-size:.7rem;color:var(--muted)}
 .split .t{font-family:var(--mono);font-size:1.45rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.2}
-.split .d{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.split .d{font-family:var(--mono);font-size:.78rem;color:var(--muted);display:block}
+.split .gap{font-family:var(--mono);font-size:.78rem;font-weight:600;display:block;margin-top:.15rem}
+.gap-ok{color:var(--ok)} .gap-no{color:var(--riesgo)}
 
 /* ---------- carga semanal ---------- */
 .load{display:flex;align-items:flex-end;gap:2px;height:190px;margin:1.4rem 0 .3rem;
@@ -160,13 +162,13 @@ footer{border-top:1px solid var(--rule);padding-top:1.4rem;color:var(--muted);fo
   <div class="wrap">
     <span class="eyebrow">Ironman 70.3 · 28 feb – 1 mar 2027</span>
     <h1>Sub-4 en<br><em>25 semanas</em></h1>
-    <p class="lede">Plan completo del 7 de septiembre al día de carrera, para 13–16 h semanales con piscina, potenciómetro y gimnasio. Introduce tus números en el calibrador y cada sesión de esta página pasa a estar en <em>tus</em> vatios y <em>tus</em> ritmos.</p>
+    <p class="lede">Plan completo del 7 de septiembre al día de carrera, para 13–16 h semanales con piscina, potenciómetro y gimnasio. Está construido contra un rendimiento concreto: los parciales de <strong>4:04:06</strong> que quieres alcanzar. Introduce tus números en el calibrador y verás tu distancia a cada uno de los tres, con todas las sesiones ya en <em>tus</em> vatios y <em>tus</em> ritmos.</p>
     <div class="factbar">
-      <div class="fact"><span class="k">Semanas</span><span class="v">25</span></div>
-      <div class="fact"><span class="k">Horas totales</span><span class="v">335</span></div>
-      <div class="fact"><span class="k">Objetivo</span><span class="v">3:59:59</span></div>
-      <div class="fact"><span class="k">Margen bici</span><span class="v">2:06</span></div>
-      <div class="fact"><span class="k">Margen carrera</span><span class="v">1:22</span></div>
+      <div class="fact"><span class="k">El modelo</span><span class="v">4:04:06</span></div>
+      <div class="fact"><span class="k">Nado 1,9 k</span><span class="v">32:25</span></div>
+      <div class="fact"><span class="k">Bici 90 k</span><span class="v">2:02:47</span></div>
+      <div class="fact"><span class="k">Carrera 21,1 k</span><span class="v">1:23:51</span></div>
+      <div class="fact"><span class="k">Semanas · horas</span><span class="v">25 · 335</span></div>
     </div>
   </div>
 </header>
@@ -174,40 +176,56 @@ footer{border-top:1px solid var(--rule);padding-top:1.4rem;color:var(--muted);fo
 <div class="wrap">
 
 <section>
-  <div class="shead"><h2>La aritmética manda</h2><span class="n">01</span></div>
+  <div class="shead"><h2>El modelo</h2><span class="n">01</span></div>
   <div class="col">
-    <p>Sub-4 en un 70.3 son <strong>240 minutos</strong> para 1,9 km de nado, 90 km de bici y 21,1 km de carrera, transiciones incluidas. Ese presupuesto es tan corto que casi no admite versiones: hay tres repartos razonables y todos exigen números de atleta de élite amateur. Conviene verlos antes de empezar a entrenar, porque son los que definen cada sesión del plan.</p>
+    <p>No entrenas contra una cifra redonda, entrenas contra un rendimiento que ya existe y que has visto desglosado. Ese <span class="mono">4:04:06</span> tiene una forma muy concreta, y su forma es la que dicta el plan.</p>
   </div>
 
   <div class="tw">
     <table>
-      <caption>Los tres repartos posibles. Ninguno deja margen: perder 4 minutos en bici obliga a recuperarlos corriendo a 3:42/km.</caption>
-      <thead><tr><th>Perfil</th><th class="n">Nado 1,9 k</th><th class="n">T1+T2</th><th class="n">Bici 90 k</th><th class="n">Carrera 21,1 k</th><th class="n">Total</th></tr></thead>
+      <caption>Lo revelador no son los tiempos, son los puestos: ese atleta llegó a 4:04 con <strong>la mejor bici de toda la carrera</strong> y un nado del montón. No es un perfil equilibrado — es un ciclista que aguanta corriendo.</caption>
+      <thead><tr><th>Parcial</th><th class="n">Tiempo</th><th class="n">Ritmo</th><th class="n">Puesto M18-24</th><th>Lectura</th></tr></thead>
       <tbody>
-        <tr><td>Nadador-ciclista</td><td class="n">28:00 <span style="color:var(--muted)">(1:28/100)</span></td><td class="n">4:00</td><td class="n">2:06 <span style="color:var(--muted)">(42,9 km/h)</span></td><td class="n">1:22 <span style="color:var(--muted)">(3:53/km)</span></td><td class="n hi">4:00</td></tr>
-        <tr><td>Corredor</td><td class="n">30:00 <span style="color:var(--muted)">(1:34/100)</span></td><td class="n">4:00</td><td class="n">2:10 <span style="color:var(--muted)">(41,5 km/h)</span></td><td class="n">1:16 <span style="color:var(--muted)">(3:36/km)</span></td><td class="n hi">4:00</td></tr>
-        <tr><td>Equilibrado</td><td class="n">29:00 <span style="color:var(--muted)">(1:31/100)</span></td><td class="n">4:00</td><td class="n">2:08 <span style="color:var(--muted)">(42,2 km/h)</span></td><td class="n">1:19 <span style="color:var(--muted)">(3:45/km)</span></td><td class="n hi">4:00</td></tr>
+        <tr><td><span class="chip c-nado">Nado</span> 1,9 km</td><td class="n">32:25</td><td class="n">1:42/100 m</td><td class="n">15.º</td><td>El punto débil del modelo. Ahí están los minutos baratos</td></tr>
+        <tr><td>T1</td><td class="n">3:41</td><td class="n">—</td><td class="n">—</td><td>Lenta. Una T1 cuidada son 2:20</td></tr>
+        <tr><td><span class="chip c-bici">Bici</span> 90 km</td><td class="n hi">2:02:47</td><td class="n hi">44,0 km/h</td><td class="n">1.º <span style="color:var(--muted)">(2.º absoluto)</span></td><td>Aquí se gana la carrera. Es el número duro del plan</td></tr>
+        <tr><td>T2</td><td class="n">1:23</td><td class="n">—</td><td class="n">—</td><td>Impecable</td></tr>
+        <tr><td><span class="chip c-corre">Carrera</span> 21,1 km</td><td class="n">1:23:51</td><td class="n">3:58/km</td><td class="n">5.º</td><td>Sólida y bien pautada, sin desplome final</td></tr>
       </tbody>
     </table>
   </div>
 
-  <h3>Lo que cuesta el split de bici</h3>
-  <div class="col"><p>Aquí es donde se gana o se pierde el sub-4, y donde la posición aerodinámica vale tanto como el motor. Vatios necesarios en llano, a nivel del mar, para un sistema de 79 kg (ciclista de 70 kg más bici y equipo):</p></div>
+  <h3>Qué te exige cada parcial</h3>
+  <div class="col"><p>Traducido a números de entrenamiento, que es lo que se puede perseguir en una sesión de martes:</p></div>
   <div class="tw">
     <table>
-      <caption>Entre una posición de ruta (CdA 0,28) y una posición de contrarreloj optimizada (0,21) hay <strong>70–80 W</strong> de diferencia: el equivalente a un año de entrenamiento, ganado en un túnel de viento o con una buena sesión de bike fit.</caption>
-      <thead><tr><th>Split bici</th><th class="n">Velocidad</th><th class="n">CdA 0,28<br><span style="font-weight:400;text-transform:none;letter-spacing:0">ruta, manetas</span></th><th class="n">CdA 0,24<br><span style="font-weight:400;text-transform:none;letter-spacing:0">cabra, buena posición</span></th><th class="n">CdA 0,21<br><span style="font-weight:400;text-transform:none;letter-spacing:0">optimizada</span></th></tr></thead>
+      <caption>La bici admite tres lecturas según tu posición aerodinámica, y entre la peor y la mejor hay <strong>78 W</strong>. Antes de intentar ganar esos vatios entrenando, se ganan en un estudio de posición: es la mejora más rentable de todo el plan.</caption>
+      <thead><tr><th>Parcial</th><th>Lo que hay que sostener el día de carrera</th><th>Lo que hay que tener entrenando</th></tr></thead>
       <tbody>
-        <tr><td class="n">2:03</td><td class="n">43,9 km/h</td><td class="n">351 W <span style="color:var(--muted)">· FTP 423</span></td><td class="n">307 W <span style="color:var(--muted)">· FTP 369</span></td><td class="n">273 W <span style="color:var(--muted)">· FTP 329</span></td></tr>
-        <tr><td class="n hi">2:06</td><td class="n">42,9 km/h</td><td class="n">329 W <span style="color:var(--muted)">· FTP 396</span></td><td class="n">287 W <span style="color:var(--muted)">· FTP 346</span></td><td class="n">256 W <span style="color:var(--muted)">· FTP 308</span></td></tr>
-        <tr><td class="n hi">2:10</td><td class="n">41,5 km/h</td><td class="n">301 W <span style="color:var(--muted)">· FTP 363</span></td><td class="n">264 W <span style="color:var(--muted)">· FTP 318</span></td><td class="n">235 W <span style="color:var(--muted)">· FTP 283</span></td></tr>
-        <tr><td class="n">2:15</td><td class="n">40,0 km/h</td><td class="n">272 W <span style="color:var(--muted)">· FTP 327</span></td><td class="n">238 W <span style="color:var(--muted)">· FTP 287</span></td><td class="n">213 W <span style="color:var(--muted)">· FTP 256</span></td></tr>
+        <tr><td><span class="chip c-nado">Nado</span></td><td class="n">1:42/100 m durante 1,9 km</td><td class="n">CSS de <strong>1:38–1:40</strong>/100 m</td></tr>
+        <tr><td><span class="chip c-bici">Bici</span></td><td class="n">44,0 km/h · 275 W a CdA 0,21<br>308 W a CdA 0,24 · 353 W a CdA 0,28</td><td class="n">FTP de <strong>331 W</strong> (posición optimizada)<br><strong>371 W</strong> (buena) · <strong>426 W</strong> (ruta)</td></tr>
+        <tr><td><span class="chip c-corre">Carrera</span></td><td class="n">3:58/km durante 21,1 km</td><td class="n">Umbral de <strong>3:36</strong>/km<br>≈ 5 km en <strong>17:00–17:20</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Y si además quieres el sub-4</h3>
+  <div class="col"><p>Ese modelo se queda a <span class="mono">4:06</span> de las cuatro horas. Merece la pena ver de dónde saldrían, porque la respuesta no es «entrenar más»:</p></div>
+  <div class="tw">
+    <table>
+      <caption>Con ese perfil, dos minutos más de bici cuestan una temporada entera; dos minutos de nado y una transición bien ejecutada son cuestión de técnica y de ensayo. El sub-4 se busca en el agua, no en el pedal.</caption>
+      <thead><tr><th>Camino</th><th class="n">Nado</th><th class="n">T1</th><th class="n">Bici</th><th class="n">Carrera</th><th class="n">Total</th></tr></thead>
+      <tbody>
+        <tr><td>Solo bici y carrera <span style="color:var(--muted)">(−2:00 y −2:07)</span></td><td class="n">32:25</td><td class="n">3:41</td><td class="n">2:00:47</td><td class="n">1:21:44</td><td class="n">4:00:00</td></tr>
+        <tr><td>Solo nado <span style="color:var(--muted)">(a 1:31/100 m)</span></td><td class="n">28:49</td><td class="n">3:41</td><td class="n">2:02:47</td><td class="n">1:23:51</td><td class="n">4:00:31</td></tr>
+        <tr style="background:var(--card2)"><td><strong>Nado a 1:33 + T1 de 2:20</strong></td><td class="n">29:27</td><td class="n">2:20</td><td class="n">2:02:47</td><td class="n">1:23:51</td><td class="n hi">3:59:48</td></tr>
+        <tr style="background:var(--card2)"><td><strong>Reparto entre las cuatro</strong></td><td class="n">30:25</td><td class="n">2:20</td><td class="n">2:01:47</td><td class="n">1:23:11</td><td class="n hi">3:59:06</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="callout col">
-    <p><strong>Dicho sin rodeos:</strong> el sub-4 pide una FTP de <span class="mono">4,4–4,9 W/kg</span> y un medio maratón de <span class="mono">1:16–1:22</span> <em>después</em> de la bici, lo que equivale a un medio maratón en fresco de 1:12–1:18. Es tiempo de ganador de grupo de edad en la mayoría de circuitos. En 25 semanas se llega si ya estás cerca; si tu 70.3 anterior fue de 4:45 o más, el salto no cabe en seis meses y el plan trabaja igual, pero con la meta recalibrada. El calibrador de abajo te dice en cuál de los dos casos estás.</p>
+    <p><strong>La consecuencia para tu plan:</strong> ese <span class="mono">2:02:47</span> es el número que manda, y pide una FTP de <span class="mono">330–370 W</span> según tu posición. Es lo que va a decidir si el objetivo cabe en 25 semanas. El calibrador de abajo te sitúa frente a los tres parciales por separado: no te dice solo cuánto te falta, sino <em>dónde</em> te falta.</p>
   </div>
 </section>
 
@@ -261,12 +279,12 @@ footer{border-top:1px solid var(--rule);padding-top:1.4rem;color:var(--muted);fo
       </div>
       <div>
         <div class="splits">
-          <div class="split s-nado"><span class="k">Nado 1,9 k</span><span class="t" id="p-nado">—</span><span class="d" id="p-nado-d"></span></div>
-          <div class="split s-bici"><span class="k">Bici 90 k</span><span class="t" id="p-bici">—</span><span class="d" id="p-bici-d"></span></div>
-          <div class="split s-corre"><span class="k">Carrera 21,1 k</span><span class="t" id="p-corre">—</span><span class="d" id="p-corre-d"></span></div>
-          <div class="split"><span class="k">Transiciones</span><span class="t">4:00</span><span class="d">fijas</span></div>
+          <div class="split s-nado"><span class="k">Nado 1,9 k</span><span class="t" id="p-nado">—</span><span class="d" id="p-nado-d"></span><span class="gap" id="g-nado"></span></div>
+          <div class="split s-bici"><span class="k">Bici 90 k</span><span class="t" id="p-bici">—</span><span class="d" id="p-bici-d"></span><span class="gap" id="g-bici"></span></div>
+          <div class="split s-corre"><span class="k">Carrera 21,1 k</span><span class="t" id="p-corre">—</span><span class="d" id="p-corre-d"></span><span class="gap" id="g-corre"></span></div>
+          <div class="split"><span class="k">Transiciones</span><span class="t">5:04</span><span class="d">las del modelo</span><span class="gap" style="color:var(--muted)">margen: 1:20</span></div>
         </div>
-        <p class="proj-note">La bici se proyecta a <span class="mono">83 %</span> de tu FTP (intensidad sostenible en un 70.3 sin arruinar la carrera a pie) y el ritmo a pie, a tu umbral <span class="mono">+22 s/km</span>, que es lo que cuesta correr con 2 horas de bici en las piernas.</p>
+        <p class="proj-note">Debajo de cada parcial, tu distancia al modelo. La bici se proyecta a <span class="mono">83 %</span> de tu FTP —intensidad sostenible en un 70.3 sin arruinar la carrera a pie— y el ritmo a pie, a tu umbral <span class="mono">+22 s/km</span>, que es lo que cuesta correr con dos horas de bici en las piernas.</p>
       </div>
     </div>
   </div>
@@ -458,7 +476,7 @@ footer{border-top:1px solid var(--rule);padding-top:1.4rem;color:var(--muted);fo
   <div style="margin-top:1rem">
     <div class="gate"><span class="when">Sem 1<br>7 sep</span><div><strong>Tests de calibración.</strong><p>FTP con test de 20', 30' de carrera a tope, y 400 + 200 m en piscina para el CSS. Estos números fijan todas las zonas del plan y son el punto de partida contra el que se compara todo lo demás.</p></div></div>
     <div class="gate"><span class="when">Sem 9<br>2 nov</span><div><strong>Primer control.</strong><p>Se repiten los tres tests. Lo esperable tras siete semanas de base: <span class="mono">+4 a +7 %</span> de FTP y <span class="mono">−5 a −10 s/km</span> de umbral en carrera. Si la mejora es menor y las sesiones se han cumplido, el problema suele ser el descanso o la alimentación diaria, no el plan.</p></div></div>
-    <div class="gate"><span class="when">Sem 17<br>28 dic</span><div><strong>La puerta que decide el objetivo.</strong><p>Con los tests de esta semana, la proyección del calibrador debe estar por debajo de <span class="mono">4:05</span> para mantener el sub-4. Entre <span class="mono">4:05 y 4:15</span>, el objetivo pasa a sub-4:10 y las sesiones específicas se recalculan a esos ritmos. Por encima de <span class="mono">4:15</span>, el objetivo del año es una marca personal amplia y el sub-4 se traslada a la temporada siguiente, que es cuando de verdad cabe.</p></div></div>
+    <div class="gate"><span class="when">Sem 17<br>28 dic</span><div><strong>La puerta que decide el objetivo.</strong><p>Aquí se compara contra los tres números del modelo, uno a uno. Para seguir apuntando al <span class="mono">4:04</span> hace falta estar en el <span class="mono">85 %</span> del camino en cada parcial: FTP por encima de <span class="mono">300 W</span> con la posición ya trabajada, umbral de carrera por debajo de <span class="mono">3:45</span>/km y CSS por debajo de <span class="mono">1:45</span>/100 m. Si dos de los tres se cumplen, se sigue. Si solo se cumple uno, el objetivo se recalibra al tiempo que sí proyecta el calibrador y las sesiones específicas se recalculan a esos ritmos: llegar a la línea de salida con una meta imposible es la mejor forma de reventar en el kilómetro 12.</p></div></div>
     <div class="gate"><span class="when">Sem 21<br>25–31 ene</span><div><strong>Carrera de preparación.</strong><p>Un olímpico a tope o un medio con la bici controlada, cinco semanas antes. Sirve para probar transiciones, nutrición y cabeza en competición real, y para validar la proyección con un dato de carrera y no de entrenamiento.</p></div></div>
   </div>
 </section>
@@ -466,17 +484,20 @@ footer{border-top:1px solid var(--rule);padding-top:1.4rem;color:var(--muted);fo
 <section>
   <div class="shead"><h2>Lo que me falta saber</h2><span class="n">08</span></div>
   <div class="col">
-    <p>El plan ya es ejecutable tal cual: empieza la semana del 7 de septiembre por los tests. Pero con estos siete datos lo afino y dejo de asumir cosas:</p>
+    <p>Ya sé contra qué entrenas. Lo que no sé es desde dónde sales, y esa mitad la pone el calibrador: mételo con tus tests y la página te dirá cuál de los tres parciales es tu verdadero problema. Con estos datos cierro la versión definitiva:</p>
     <ol class="tight">
-      <li><strong>Los parciales de tu 70.3 anterior</strong> —nado, bici, carrera por separado— y en qué circuito. Es el dato que más cambia el plan.</li>
-      <li><strong>Qué carrera es la del 1 de marzo.</strong> El perfil manda: 900 m de desnivel positivo cambian los vatios objetivo y todo el reparto de tiempos.</li>
-      <li><strong>Tu FTP actual y tu peso</strong>, si ya los tienes medidos.</li>
-      <li><strong>Tu mejor 5 km o 10 km reciente</strong>, para no depender solo del test de 30'.</li>
-      <li><strong>Tu ritmo cómodo por 100 m</strong> y cuántos años llevas nadando.</li>
+      <li><strong>Tus parciales.</strong> Tu último 70.3 desglosado, o el triatlón más largo que hayas hecho. Es lo que convierte el modelo en una distancia medible.</li>
+      <li><strong>Tu FTP y tu peso</strong>, y si has hecho un estudio de posición. Con un objetivo de bici de 44 km/h, la posición aerodinámica no es un extra: son 78 W de diferencia entre la mejor y la peor.</li>
+      <li><strong>Tu mejor 5 km o 10 km reciente</strong>, para fijar el umbral de carrera sin depender solo del test de 30'.</li>
+      <li><strong>Tu ritmo cómodo por 100 m</strong> y de dónde vienes nadando: si aprendiste de adulto, ahí hay minutos que no cuestan vatios.</li>
+      <li><strong>Qué carrera es la del 1 de marzo.</strong> El modelo que persigues rodó a 44 km/h de media, con parciales de 45,5 y 48,4 km/h: eso es un circuito rápido y con viento a favor en algún tramo. Si el tuyo tiene 900 m de desnivel, ese <span class="mono">2:02:47</span> no es comparable y hay que recalcular el objetivo entero.</li>
       <li><strong>Lesiones o zonas delicadas</strong>, y el historial de las que ya has tenido.</li>
-      <li><strong>La fecha exacta.</strong> El 1 de marzo de 2027 cae en lunes, así que he montado el plan para competir el domingo 28 de febrero. Si la carrera es otro día, se desplaza todo un bloque.</li>
     </ol>
-    <p>Con eso te devuelvo la versión definitiva: mismas 25 semanas, pero con los vatios y ritmos cerrados sesión a sesión y el reparto de tiempos ajustado a tu circuito.</p>
+    <h4>Dos cosas que conviene decidir ya</h4>
+    <ul class="tight">
+      <li><strong>El objetivo real.</strong> Me dijiste «menos de 4 horas» y el modelo que persigues es <span class="mono">4:04:06</span>. No son lo mismo: entre ambos hay cuatro minutos que, con ese perfil, solo salen del agua y de T1. Dime cuál de los dos manda y ajusto el reparto de tiempos.</li>
+      <li><strong>La fecha exacta.</strong> El 1 de marzo de 2027 cae en lunes, así que el plan está montado para competir el domingo 28 de febrero. Si la carrera es otro día, se desplaza un bloque entero.</li>
+    </ul>
   </div>
 </section>
 
@@ -619,6 +640,7 @@ footer{border-top:1px solid var(--rule);padding-top:1.4rem;color:var(--muted);fo
     var q = function(id){ return document.getElementById(id); };
     if (!ok){
       ["p-total", "p-nado", "p-bici", "p-corre"].forEach(function(i){ q(i).textContent = "—"; });
+      ["g-nado", "g-bici", "g-corre"].forEach(function(i){ q(i).textContent = ""; });
       q("p-verdict").textContent = "Faltan datos";
       q("p-verdict").className = "verdict";
       q("p-note").textContent = "Completa los seis campos para ver la proyección.";
@@ -641,19 +663,35 @@ footer{border-top:1px solid var(--rule);padding-top:1.4rem;color:var(--muted);fo
     q("p-corre-d").textContent = fmtPace(paceCorre) + "/km";
     q("p-total").textContent = fmtTime(total);
 
-    var v = q("p-verdict"), nota = q("p-note"), falta = total - 14400;
+    // distancia a cada parcial del modelo
+    [["g-nado", tNado, 1945], ["g-bici", tBici, 7367], ["g-corre", tCorre, 5031]].forEach(function(r){
+      var el = q(r[0]), dif = r[1] - r[2];
+      if (dif <= 0){
+        el.textContent = "−" + fmtMin(-dif) + " vs modelo";
+        el.className = "gap gap-ok";
+      } else {
+        el.textContent = "+" + fmtMin(dif) + " vs modelo";
+        el.className = "gap gap-no";
+      }
+    });
+
+    var v = q("p-verdict"), nota = q("p-note");
+    var faltaModelo = total - 14646, faltaSub4 = total - 14400;
     if (total <= 14400){
-      v.textContent = "Sub-4 al alcance"; v.className = "verdict v-ok";
-      nota.textContent = "Con estos números ya proyectas por debajo de 4 horas. El plan sirve para consolidarlo y llegar con margen.";
-    } else if (falta <= 900){
-      v.textContent = "A " + fmtMin(falta) + " del objetivo"; v.className = "verdict v-mid";
+      v.textContent = "Por delante del modelo"; v.className = "verdict v-ok";
+      nota.textContent = "Proyectas por debajo de las 4 horas, o sea mejor que el 4:04:06 que persigues. El plan pasa a servir para consolidarlo y llegar con margen el día de la carrera.";
+    } else if (faltaModelo <= 0){
+      v.textContent = "Al nivel del modelo"; v.className = "verdict v-ok";
+      nota.textContent = "Ya estás en ese rendimiento. Te quedan " + fmtMin(faltaSub4) + " para las 4 horas: mira arriba de dónde salen, porque casi siempre están en el agua y en T1.";
+    } else if (faltaModelo <= 900){
+      v.textContent = "A " + fmtMin(faltaModelo) + " del modelo"; v.className = "verdict v-mid";
       nota.textContent = "Distancia recuperable en 25 semanas: es exactamente el salto que este plan está diseñado para dar. La puerta de la semana 17 lo confirmará.";
-    } else if (falta <= 2700){
-      v.textContent = "A " + fmtMin(falta) + " del objetivo"; v.className = "verdict v-mid";
-      nota.textContent = "Salto grande pero no imposible si vienes de una base sólida. Prepárate para que la puerta de la semana 17 recalibre el objetivo hacia sub-4:10.";
+    } else if (faltaModelo <= 2700){
+      v.textContent = "A " + fmtMin(faltaModelo) + " del modelo"; v.className = "verdict v-mid";
+      nota.textContent = "Salto grande pero no imposible con una base sólida detrás. Mira qué parcial acumula más diferencia: ahí es donde este plan tiene que cargar el peso.";
     } else {
-      v.textContent = "A " + fmtMin(falta) + " del objetivo"; v.className = "verdict v-no";
-      nota.textContent = "El sub-4 no cabe en 25 semanas desde aquí. Haz este plan igualmente con el objetivo de una marca personal amplia: es el año de base que hace posible el sub-4 en la temporada siguiente.";
+      v.textContent = "A " + fmtMin(faltaModelo) + " del modelo"; v.className = "verdict v-no";
+      nota.textContent = "Ese rendimiento no cabe en 25 semanas desde aquí, y forzarlo es la vía rápida a la lesión. Haz el plan con el objetivo de una marca personal amplia: es el año de base que lo hace posible en la temporada siguiente.";
     }
 
     try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
