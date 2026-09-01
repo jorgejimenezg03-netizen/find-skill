@@ -1,0 +1,629 @@
+{
+  "version": 1,
+  "descripcion": "Banco de ejercicios para entrenar el reconocimiento, la interpretacion y la produccion de ironia en espanol.",
+  "ejercicios": [
+    {
+      "id": "rec-001",
+      "modo": "reconocer",
+      "nivel": 1,
+      "tipo": "verbal",
+      "contexto": "Se te cae el café encima diez minutos antes de una entrevista de trabajo.",
+      "enunciado": "Dices: «Perfecto. Justo lo que necesitaba hoy.»",
+      "pregunta": "¿Qué está ocurriendo aquí?",
+      "opciones": [
+        "Ironía verbal: dices lo contrario de lo que piensas",
+        "No hay ironía: es una valoración literal",
+        "Ironía dramática: el oyente sabe algo que tú no"
+      ],
+      "respuesta": 0,
+      "pista": "Compara lo que dicen las palabras con lo que dicen los hechos.",
+      "explicacion": "El enunciado afirma algo positivo («perfecto») mientras la situación es claramente negativa. Esa contradicción entre palabra y hecho, hecha a propósito y esperando que el otro la note, es ironía verbal."
+    },
+    {
+      "id": "rec-002",
+      "modo": "reconocer",
+      "nivel": 1,
+      "tipo": "situacional",
+      "contexto": "Un parque de bomberos organiza una barbacoa benéfica.",
+      "enunciado": "El fuego de la barbacoa se descontrola y quema el patio del parque.",
+      "pregunta": "¿Qué tipo de ironía es?",
+      "opciones": [
+        "Ironía verbal",
+        "Ironía situacional",
+        "No es ironía, solo mala suerte"
+      ],
+      "respuesta": 1,
+      "pista": "Nadie ha dicho nada. ¿Dónde está el contraste?",
+      "explicacion": "Aquí nadie habla con doble sentido: el contraste está entre lo que se espera de unos bomberos (apagar fuegos) y lo que ocurre (provocar uno). Eso es ironía situacional. Sin ese choque de expectativas sería solo mala suerte."
+    },
+    {
+      "id": "rec-003",
+      "modo": "reconocer",
+      "nivel": 1,
+      "tipo": "dramatica",
+      "contexto": "En una obra de teatro, el público ha visto cómo envenenaban una copa.",
+      "enunciado": "El protagonista levanta esa copa y brinda: «¡Por una vida larga!»",
+      "pregunta": "¿Qué tipo de ironía es?",
+      "opciones": [
+        "Ironía verbal del protagonista",
+        "Ironía situacional",
+        "Ironía dramática"
+      ],
+      "respuesta": 2,
+      "pista": "¿Quién sabe más, el personaje o tú?",
+      "explicacion": "El personaje habla en serio: no hay doble intención por su parte. La ironía la produce el desnivel de información entre el público (que sabe) y el personaje (que no). Eso es ironía dramática."
+    },
+    {
+      "id": "rec-004",
+      "modo": "reconocer",
+      "nivel": 1,
+      "tipo": "literal",
+      "contexto": "Tu amigo llega empapado porque le ha pillado la tormenta.",
+      "enunciado": "Le dices: «Voy a por una toalla.»",
+      "pregunta": "¿Hay ironía?",
+      "opciones": [
+        "Sí, ironía verbal",
+        "No: es literal y cooperativo",
+        "Sí, ironía situacional"
+      ],
+      "respuesta": 1,
+      "pista": "No todo comentario en una situación mala es irónico.",
+      "explicacion": "Un buen detector de ironía también tiene que decir «aquí no hay». La frase dice exactamente lo que significa y encaja con la situación: no hay contraste que interpretar."
+    },
+    {
+      "id": "rec-005",
+      "modo": "reconocer",
+      "nivel": 1,
+      "tipo": "verbal",
+      "contexto": "Tu amigo ha vuelto a cerrar el coche con las llaves dentro. Le hablas con retintín delante de los demás.",
+      "enunciado": "«Menudo genio tenemos aquí.»",
+      "pregunta": "¿Cómo describirías mejor el enunciado?",
+      "opciones": [
+        "Ironía verbal en su variante sarcástica: va dirigida a una persona y busca escocer",
+        "Ironía situacional",
+        "Elogio literal"
+      ],
+      "respuesta": 0,
+      "pista": "Todo sarcasmo es ironía verbal, pero no toda ironía verbal es sarcasmo.",
+      "explicacion": "El sarcasmo es ironía verbal con blanco humano y voluntad de pinchar. La misma frase dicha sobre la situación («menudo día llevamos») sería irónica sin ser sarcástica."
+    },
+    {
+      "id": "rec-006",
+      "modo": "reconocer",
+      "nivel": 1,
+      "tipo": "literal",
+      "contexto": "Llevas seis horas sin comer.",
+      "enunciado": "«Me muero de hambre.»",
+      "pregunta": "¿Qué recurso es?",
+      "opciones": [
+        "Ironía verbal",
+        "Hipérbole: exageración, no inversión",
+        "Ironía situacional"
+      ],
+      "respuesta": 1,
+      "pista": "¿Dices lo contrario de lo que piensas, o lo mismo pero subido de volumen?",
+      "explicacion": "La ironía invierte el sentido; la hipérbole lo amplifica. Aquí el hablante sí tiene hambre, solo lo dice a lo grande. Confundir ambas es el error más común al empezar."
+    },
+    {
+      "id": "rec-007",
+      "modo": "reconocer",
+      "nivel": 2,
+      "tipo": "situacional",
+      "contexto": "Un consultor de ciberseguridad da charlas sobre contraseñas seguras.",
+      "enunciado": "Le hackean la cuenta: su contraseña era «123456».",
+      "pregunta": "¿Qué tipo de ironía es?",
+      "opciones": [
+        "Ironía dramática",
+        "Ironía situacional",
+        "Ironía verbal"
+      ],
+      "respuesta": 1,
+      "pista": "El contraste está entre el papel que ocupa alguien y lo que hace.",
+      "explicacion": "Ironía situacional: el resultado contradice frontalmente lo que el propio personaje representa. Es el patrón «el zapatero va descalzo»."
+    },
+    {
+      "id": "rec-008",
+      "modo": "reconocer",
+      "nivel": 2,
+      "tipo": "socratica",
+      "contexto": "Un profesor ve el fallo en el razonamiento de una alumna, pero no se lo señala.",
+      "enunciado": "«No termino de entenderlo, explícamelo otra vez: si esto fuera cierto, ¿qué pasaría con el otro caso?»",
+      "pregunta": "¿Qué tipo de ironía es?",
+      "opciones": [
+        "Ironía socrática: fingir ignorancia para que el otro descubra el error",
+        "Sarcasmo",
+        "Ironía dramática"
+      ],
+      "respuesta": 0,
+      "pista": "El que finge no saber es quien sí sabe.",
+      "explicacion": "La ironía socrática simula ignorancia para llevar al interlocutor a examinar sus propias ideas. No hay burla: el objetivo es que el otro llegue solo a la conclusión."
+    },
+    {
+      "id": "rec-009",
+      "modo": "reconocer",
+      "nivel": 2,
+      "tipo": "literal",
+      "contexto": "Alguien afirma: «Nadie ayuda gratis; si te echan una mano es porque quieren algo.»",
+      "enunciado": "Lo dice completamente en serio y así lo piensa.",
+      "pregunta": "¿Es ironía?",
+      "opciones": [
+        "Sí, ironía verbal",
+        "No: es cinismo, una postura, no una inversión de sentido",
+        "Sí, ironía situacional"
+      ],
+      "respuesta": 1,
+      "pista": "¿Hay distancia entre lo dicho y lo pensado?",
+      "explicacion": "El cinismo es una actitud ante el mundo; la ironía es un mecanismo de significado. Aquí el hablante cree literalmente lo que dice, así que no hay ironía por mucho que suene amargo."
+    },
+    {
+      "id": "rec-010",
+      "modo": "reconocer",
+      "nivel": 2,
+      "tipo": "situacional",
+      "contexto": "Llevas el paraguas en la mochila todos los días de un mes seco.",
+      "enunciado": "El único día que lo dejas en casa cae el chaparrón del año.",
+      "pregunta": "¿Cómo lo clasificarías?",
+      "opciones": [
+        "Ironía situacional (la llamada «ironía del destino»)",
+        "Ironía verbal",
+        "Ironía dramática"
+      ],
+      "respuesta": 0,
+      "pista": "La expectativa la habías construido tú con tu propia precaución.",
+      "explicacion": "Ironía situacional en su versión cósmica o «del destino»: el desenlace se burla justo de la precaución tomada. Ojo: si no hubiera esa preparación previa, solo sería una coincidencia desafortunada."
+    },
+    {
+      "id": "rec-011",
+      "modo": "reconocer",
+      "nivel": 2,
+      "tipo": "verbal",
+      "contexto": "Un incendio ha dejado la cocina calcinada. El dueño mira las ruinas.",
+      "enunciado": "«Bueno, ha sido un pequeño contratiempo.»",
+      "pregunta": "¿Qué mecanismo irónico usa?",
+      "opciones": [
+        "Antífrasis: llama a algo por su nombre contrario",
+        "Atenuación irónica (understatement): se queda deliberadamente corto",
+        "No hay ironía: está minimizando por shock"
+      ],
+      "respuesta": 1,
+      "pista": "No dice lo contrario; dice muchísimo menos.",
+      "explicacion": "La ironía no siempre invierte: también funciona quedándose corta a propósito. Decir «pequeño contratiempo» ante un desastre es understatement, y la distancia entre la palabra y el hecho es la que produce el efecto."
+    },
+    {
+      "id": "rec-012",
+      "modo": "reconocer",
+      "nivel": 2,
+      "tipo": "verbal",
+      "contexto": "Te avisan por mensaje de una reunión cinco minutos antes de que empiece.",
+      "enunciado": "Respondes: «Gracias por avisar con tanta antelación.»",
+      "pregunta": "En un texto sin tono de voz, ¿qué hace que se entienda como ironía?",
+      "opciones": [
+        "Nada: sin tono de voz no puede leerse como ironía",
+        "El contraste evidente con un hecho que ambos conocen: los cinco minutos",
+        "El uso de la palabra «gracias»"
+      ],
+      "respuesta": 1,
+      "pista": "¿Qué información comparten los dos y hace imposible la lectura literal?",
+      "explicacion": "Por escrito la ironía se sostiene sobre el contexto compartido: si ambos saben que el aviso llegó tarde, la lectura literal se vuelve absurda y el receptor busca la irónica. Cuando ese contexto no está garantizado, el malentendido es casi seguro."
+    },
+    {
+      "id": "rec-013",
+      "modo": "reconocer",
+      "nivel": 3,
+      "tipo": "verbal",
+      "contexto": "Presentas a un compañero que mide dos metros.",
+      "enunciado": "«Este es Chiquitín.»",
+      "pregunta": "¿Qué recurso es?",
+      "opciones": [
+        "Antífrasis: se usa el término de sentido contrario",
+        "Understatement",
+        "Ironía dramática"
+      ],
+      "respuesta": 0,
+      "pista": "El sentido contrario está en una sola palabra.",
+      "explicacion": "La antífrasis concentra la inversión en un término («Chiquitín» por altísimo). Es el motor de muchos apodos cariñosos: ironía sin agresión, sostenida por lo obvio del contraste."
+    },
+    {
+      "id": "rec-014",
+      "modo": "reconocer",
+      "nivel": 3,
+      "tipo": "estructural",
+      "contexto": "Un narrador en primera persona describe a su jefe como «el hombre más generoso que he conocido» y, en la misma página, cuenta sin darse cuenta que le descuenta el café del sueldo.",
+      "enunciado": "El narrador no percibe ninguna contradicción.",
+      "pregunta": "¿Qué tipo de ironía sostiene el pasaje?",
+      "opciones": [
+        "Ironía verbal del narrador",
+        "Ironía estructural: el texto desmiente al narrador ante el lector",
+        "No hay ironía, hay un error de coherencia"
+      ],
+      "respuesta": 1,
+      "pista": "¿Quién produce la ironía: el narrador o el autor por encima de él?",
+      "explicacion": "El narrador habla en serio; es el texto el que le contradice. La ironía estructural (narrador poco fiable) instala un doble nivel de lectura estable a lo largo de toda la obra, no en una frase suelta."
+    },
+    {
+      "id": "rec-015",
+      "modo": "reconocer",
+      "nivel": 3,
+      "tipo": "literal",
+      "contexto": "Has pasado la tarde peleándote con un error. Tu compañera lo arregla y lo comprueba delante de ti.",
+      "enunciado": "Dices: «Genial, ya está.»",
+      "pregunta": "¿Hay ironía?",
+      "opciones": [
+        "Sí: «genial» casi siempre es irónico",
+        "No: aquí lo dicho y los hechos coinciden",
+        "Depende del tono, es indecidible"
+      ],
+      "respuesta": 1,
+      "pista": "Cuidado con marcar como irónico todo lo que suene entusiasta.",
+      "explicacion": "Ninguna palabra es irónica por sí sola. Con el problema realmente resuelto no hay contraste, así que la lectura es literal. Sobredetectar ironía es tan costoso como no verla: convierte el elogio sincero en sospecha."
+    },
+    {
+      "id": "rec-016",
+      "modo": "reconocer",
+      "nivel": 3,
+      "tipo": "dramatica",
+      "contexto": "En una película, el espectador ha visto entrar al asesino por la ventana del piso de arriba.",
+      "enunciado": "La protagonista cierra la puerta con llave y dice aliviada: «Por fin en casa, a salvo.»",
+      "pregunta": "¿Qué tipo de ironía es y de qué vive?",
+      "opciones": [
+        "Ironía dramática, y vive del desnivel de información entre público y personaje",
+        "Ironía verbal, y vive del tono de la actriz",
+        "Ironía situacional, y vive de la casualidad"
+      ],
+      "respuesta": 0,
+      "pista": "Si el espectador no hubiera visto la ventana, la escena sería neutra.",
+      "explicacion": "Ironía dramática pura: quítale al espectador la información previa y la frase se vuelve trivial. Es el motor de la tensión en el suspense, y por eso Hitchcock enseñaba la bomba bajo la mesa antes de la conversación."
+    },
+    {
+      "id": "rec-017",
+      "modo": "reconocer",
+      "nivel": 3,
+      "tipo": "verbal",
+      "contexto": "En una reunión tensa, el jefe propone algo y una empleada responde con voz perfectamente neutra.",
+      "enunciado": "«Claro. Porque la última vez salió estupendamente.»",
+      "pregunta": "¿Qué marca la ironía si el tono es neutro?",
+      "opciones": [
+        "Nada la marca: es ambigua y no debe leerse como ironía",
+        "La alusión a un hecho pasado que ambos saben que salió mal",
+        "El adverbio «estupendamente» en sí mismo"
+      ],
+      "respuesta": 1,
+      "pista": "La ironía suele hacer eco de algo que ya está en la memoria común.",
+      "explicacion": "Muchas ironías funcionan por eco: retoman una expectativa o una promesa anterior y la ponen al lado del resultado real. La marca no es el tono ni la palabra, es la memoria compartida a la que se apunta."
+    },
+    {
+      "id": "rec-018",
+      "modo": "reconocer",
+      "nivel": 3,
+      "tipo": "estructural",
+      "contexto": "Un artículo defiende con toda seriedad y datos falsos una propuesta monstruosa, esperando que el lector la rechace.",
+      "enunciado": "En ningún momento el texto guiña al lector ni se desmarca.",
+      "pregunta": "¿Cómo se llama esta estrategia y cuál es su riesgo?",
+      "opciones": [
+        "Sátira por ironía sostenida; su riesgo es que se lea en serio",
+        "Ironía dramática; su riesgo es aburrir",
+        "No es ironía: es desinformación"
+      ],
+      "respuesta": 0,
+      "pista": "Piensa en la «Modesta proposición» de Swift.",
+      "explicacion": "La ironía sostenida sin marcas explícitas es la herramienta clásica de la sátira, y su fallo característico es la lectura literal por parte de quien no comparte el contexto. Cuanto más lejos está el público, más necesarias son las señales."
+    },
+    {
+      "id": "int-001",
+      "modo": "interpretar",
+      "nivel": 1,
+      "tipo": "verbal",
+      "contexto": "Entras en la cocina y hay una torre de platos sucios. Tu compañero de piso lleva toda la tarde en el sofá.",
+      "enunciado": "«Ya veo que has estado ocupadísimo.»",
+      "pregunta": "¿Qué quiere decir realmente?",
+      "opciones": [
+        "Que reconoce su esfuerzo",
+        "Que le reprocha no haber hecho nada",
+        "Que le da igual el estado de la cocina"
+      ],
+      "respuesta": 1,
+      "pista": "Invierte la frase y quédate con la intención, no con las palabras.",
+      "explicacion": "La ironía verbal comunica lo contrario de lo dicho más una emoción añadida: aquí, reproche. Traducir «lo que se dice» a «lo que se quiere» es el 80% de la interpretación."
+    },
+    {
+      "id": "int-002",
+      "modo": "interpretar",
+      "nivel": 1,
+      "tipo": "verbal",
+      "contexto": "Llevas semanas insistiendo en que había un fallo en el diseño. Hoy ha reventado exactamente por ahí.",
+      "enunciado": "Dices: «No, si al final va a resultar que tenía razón.»",
+      "pregunta": "¿Qué añade la ironía frente a decir «tenía razón»?",
+      "opciones": [
+        "Añade duda sobre si realmente la tenías",
+        "Añade el reproche por no haber sido escuchado, sin decirlo abiertamente",
+        "No añade nada, es un adorno"
+      ],
+      "respuesta": 1,
+      "pista": "¿Qué se dice sin tener que decirlo?",
+      "explicacion": "La ironía permite decir dos cosas a la vez: el contenido («tenía razón») y una queja («no me hicisteis caso»). Ese ahorro es lo que la hace tan útil y tan fácil de malinterpretar."
+    },
+    {
+      "id": "int-003",
+      "modo": "interpretar",
+      "nivel": 2,
+      "tipo": "verbal",
+      "contexto": "Tu jefe te ha recordado el informe tres veces esta mañana. Le pides un poco más de tiempo.",
+      "enunciado": "Responde: «Tómate el tiempo que necesites, no hay ninguna prisa.»",
+      "pregunta": "¿Qué está comunicando?",
+      "opciones": [
+        "Flexibilidad real: puedes entregarlo mañana",
+        "Presión: quiere el informe ya, pero sin ordenarlo de frente",
+        "Indiferencia hacia el informe"
+      ],
+      "respuesta": 1,
+      "pista": "Los tres recordatorios son el contexto que decide la lectura.",
+      "explicacion": "La ironía se usa mucho para ejercer presión sin asumir el coste de una orden. Ojo con el uso jerárquico: el que manda puede permitirse la ambigüedad, el que obedece paga el error de interpretación."
+    },
+    {
+      "id": "int-004",
+      "modo": "interpretar",
+      "nivel": 2,
+      "tipo": "verbal",
+      "contexto": "Alguien acaba de tocar una pieza de piano de una dificultad enorme, sin un solo fallo. Un profesor muy contenido comenta:",
+      "enunciado": "«No ha estado nada mal.»",
+      "pregunta": "¿Cómo hay que leerlo?",
+      "opciones": [
+        "Como una crítica suave: esperaba más",
+        "Como un elogio alto expresado por atenuación",
+        "Como una valoración neutra y literal"
+      ],
+      "respuesta": 1,
+      "pista": "La atenuación irónica también funciona hacia arriba.",
+      "explicacion": "El understatement no siempre disfraza desastres: aplicado a un logro enorme, funciona como elogio máximo. La clave sigue siendo la distancia entre la magnitud del hecho y la modestia de la palabra."
+    },
+    {
+      "id": "int-005",
+      "modo": "interpretar",
+      "nivel": 2,
+      "tipo": "pragmatica",
+      "contexto": "En un chat de trabajo escribes: «Buenísima idea, hagámoslo el viernes a última hora.» Lo dices en broma. Media hora después alguien ha bloqueado la sala para el viernes.",
+      "enunciado": "Tu ironía no ha llegado.",
+      "pregunta": "¿Cuál fue el fallo principal?",
+      "opciones": [
+        "El receptor no es inteligente",
+        "Faltó una señal recuperable: contexto compartido, marca de tono o un remate que hiciera imposible la lectura literal",
+        "La ironía no funciona nunca por escrito"
+      ],
+      "respuesta": 1,
+      "pista": "La ironía es un contrato: el emisor pone la pista, el receptor la recoge.",
+      "explicacion": "La ironía solo existe si el receptor puede reconstruirla. Por escrito y entre desconocidos, el emisor es responsable de dejar la señal: una alusión compartida, un remate absurdo, una marca explícita. Culpar al receptor es la salida fácil y la que rompe equipos."
+    },
+    {
+      "id": "int-006",
+      "modo": "interpretar",
+      "nivel": 2,
+      "tipo": "pragmatica",
+      "contexto": "En una comida familiar, alguien comenta con retintín delante de todos: «Qué bien que por fin hayas encontrado trabajo, ya empezábamos a preocuparnos.»",
+      "enunciado": "El destinatario se queda callado.",
+      "pregunta": "¿Qué diferencia esta ironía de una broma cómplice?",
+      "opciones": [
+        "Que tiene público y el blanco es una persona vulnerable en ese momento: humilla en vez de unir",
+        "Que usa la palabra «preocuparnos»",
+        "Nada, toda ironía es igual de agresiva"
+      ],
+      "respuesta": 0,
+      "pista": "Pregúntate de qué lado queda el blanco cuando termina la frase.",
+      "explicacion": "La misma estructura irónica une o humilla según el blanco y el público. Si el blanco es la situación, o alguien con poder para devolverla, crea complicidad; si es una persona en desventaja y hay audiencia, es una agresión con coartada de humor."
+    },
+    {
+      "id": "int-007",
+      "modo": "interpretar",
+      "nivel": 3,
+      "tipo": "pragmatica",
+      "contexto": "Sales de una reunión de una hora cuyo contenido cabía en tres líneas. Comentas al equipo:",
+      "enunciado": "«Qué original: otra reunión que podía haber sido un correo.»",
+      "pregunta": "¿Cuál es el blanco de la ironía?",
+      "opciones": [
+        "La persona que convocó, personalmente",
+        "El proceso o la costumbre de la organización",
+        "El propio equipo"
+      ],
+      "respuesta": 1,
+      "pista": "Fíjate en el sujeto de la crítica, no en quién está delante.",
+      "explicacion": "Identificar el blanco es lo que decide si una ironía es aceptable en un contexto. Aquí apunta a una práctica compartida, así que el grupo puede reírse junto; si señalara a la persona, el mismo chiste se convertiría en un reproche público."
+    },
+    {
+      "id": "int-008",
+      "modo": "interpretar",
+      "nivel": 3,
+      "tipo": "verbal",
+      "contexto": "Una amiga te cuenta que ha dejado un trabajo estable para montar algo propio, y ve tu cara.",
+      "enunciado": "Te dice: «Ya veo que te parece una idea buenísima.»",
+      "pregunta": "¿Qué está haciendo con la ironía?",
+      "opciones": [
+        "Atacarte por no apoyarla",
+        "Nombrar tu reacción sin obligarte a admitirla: abre la conversación dejándote salida",
+        "Pedirte consejo técnico"
+      ],
+      "respuesta": 1,
+      "pista": "La ironía también sirve para decir lo incómodo de forma reversible.",
+      "explicacion": "Un uso muy fino de la ironía es el «deniability»: pone sobre la mesa algo delicado de un modo que ambos pueden retirar sin coste («era broma»). Sirve para abordar tensiones sin escalar, y de ahí su valor social."
+    },
+    {
+      "id": "int-009",
+      "modo": "interpretar",
+      "nivel": 3,
+      "tipo": "pragmatica",
+      "contexto": "Escribes en un hilo público: «Claro, porque prohibirlo ha funcionado siempre de maravilla.» Un lector que llega desde fuera te cita como defensor de la prohibición.",
+      "enunciado": "Tu frase se ha propagado sin contexto.",
+      "pregunta": "¿Qué te enseña este caso sobre la ironía en público?",
+      "opciones": [
+        "Que hay que evitar toda ironía siempre",
+        "Que la ironía viaja mal: separada de su contexto se lee al pie de la letra, así que a más alcance, más señal explícita",
+        "Que el lector actuó de mala fe y no hay nada que aprender"
+      ],
+      "respuesta": 1,
+      "pista": "Piensa en qué queda de la frase cuando se le quita todo lo que la rodeaba.",
+      "explicacion": "La ironía es dependiente del contexto, y en público el contexto se pierde en el primer reenvío. Ante audiencias amplias o desconocidas: o dejas una marca inequívoca, o asumes que alguien la leerá literalmente."
+    },
+    {
+      "id": "int-010",
+      "modo": "interpretar",
+      "nivel": 3,
+      "tipo": "verbal",
+      "contexto": "Un compañero entrega tarde y de mala calidad. En la revisión escribes: «Impresionante nivel de detalle.»",
+      "enunciado": "Él responde: «Gracias.»",
+      "pregunta": "¿Qué lectura es más probable y qué deberías hacer?",
+      "opciones": [
+        "Se ha hecho el tonto a propósito; insiste con más ironía",
+        "No ha captado la ironía o ha elegido no captarla; en una crítica de trabajo, cambia a lenguaje directo",
+        "Da igual: ya está dicho"
+      ],
+      "respuesta": 1,
+      "pista": "¿Cuál es el coste de que la ironía no llegue en este contexto concreto?",
+      "explicacion": "La ironía es mal vehículo para feedback accionable: si no llega, el problema no se corrige, y si llega, escuece más que la crítica directa. Regla práctica: ironía para lo social, literalidad para lo que tiene que cambiar."
+    },
+    {
+      "id": "pro-001",
+      "modo": "producir",
+      "nivel": 1,
+      "tipo": "verbal",
+      "contexto": "Has quedado a las 20:00 con un amigo que siempre llega tarde. Aparece a las 20:45, tan tranquilo.",
+      "consigna": "Escribe una réplica irónica breve (una frase) que sea evidente para él y no hiriente.",
+      "criterios": [
+        "Contradice un hecho visible para los dos (la hora)",
+        "Cabe en una frase, sin explicación posterior",
+        "El blanco es la costumbre, no la persona: no insulta ni humilla"
+      ],
+      "ejemplos": [
+        "«Puntualísimo, como siempre.»",
+        "«Nada, si acabo de llegar yo también... hace tres cuartos de hora.»",
+        "«Menos mal que dijimos a las ocho y no a las siete.»"
+      ],
+      "explicacion": "La ironía amable se apoya en un dato objetivo compartido (la hora) y apunta a un patrón, no al carácter. Si tienes que explicarla después, no había suficiente contexto o sobraban palabras."
+    },
+    {
+      "id": "pro-002",
+      "modo": "producir",
+      "nivel": 1,
+      "tipo": "antifrasis",
+      "contexto": "Un día malísimo: se te ha estropeado el móvil, has perdido el tren y llueve.",
+      "consigna": "Describe ese día en dos frases usando el vocabulario de un folleto turístico.",
+      "criterios": [
+        "Usa léxico claramente positivo o promocional",
+        "Los hechos negativos siguen siendo reconocibles",
+        "El contraste hace el trabajo: no añades «qué desastre» al final"
+      ],
+      "ejemplos": [
+        "«Jornada de desconexión digital total, con transporte alternativo incluido y ducha natural continua.»",
+        "«Una experiencia inmersiva: sin pantallas, sin horarios y en pleno contacto con el clima local.»"
+      ],
+      "explicacion": "La antífrasis sostenida (registro positivo aplicado a hechos negativos) es uno de los patrones más fiables para generar ironía por escrito, porque el contraste está en cada palabra y no depende del tono."
+    },
+    {
+      "id": "pro-003",
+      "modo": "producir",
+      "nivel": 2,
+      "tipo": "understatement",
+      "contexto": "Tu equipo ha estado 14 horas arreglando una caída total del servicio que dejó fuera a todos los clientes.",
+      "consigna": "Resume la jornada con una atenuación irónica de una sola línea.",
+      "criterios": [
+        "Se queda deliberadamente corto respecto a la magnitud real",
+        "No exagera ni invierte: minimiza",
+        "Funciona sin necesidad de tono de voz"
+      ],
+      "ejemplos": [
+        "«Hemos tenido un martes con algo más de actividad de lo normal.»",
+        "«Pequeño imprevisto de catorce horas.»",
+        "«Digamos que el día no ha sido especialmente tranquilo.»"
+      ],
+      "explicacion": "El understatement es ironía de bajo riesgo: no humilla a nadie y se entiende incluso si el lector no comparte todo el contexto, porque los hechos ya son públicos. Muy útil en entornos profesionales."
+    },
+    {
+      "id": "pro-004",
+      "modo": "producir",
+      "nivel": 2,
+      "tipo": "verbal",
+      "contexto": "Quieres decirle a un compañero que su forma de organizar los archivos es un caos. La versión hostil sería: «Eres un desastre, no hay quien encuentre nada.»",
+      "consigna": "Reescríbelo con ironía suave que critique el sistema, no a la persona.",
+      "criterios": [
+        "El blanco es el método o el resultado, no el carácter del otro",
+        "Deja abierta la puerta a que él mismo se ría y lo cambie",
+        "No usa insultos ni generalizaciones sobre la persona"
+      ],
+      "ejemplos": [
+        "«Tu carpeta tiene un sistema tan avanzado que aún no lo hemos descifrado.»",
+        "«He encontrado el archivo. Solo he necesitado tres cafés y un mapa.»"
+      ],
+      "explicacion": "Cambiar el blanco de la persona al objeto es la maniobra que convierte el sarcasmo en humor compartido. La crítica sigue siendo clara, pero el otro puede sumarse en lugar de defenderse."
+    },
+    {
+      "id": "pro-005",
+      "modo": "producir",
+      "nivel": 2,
+      "tipo": "pragmatica",
+      "contexto": "Vas a mandar por chat, a gente que no te conoce bien: «Genial, otro formulario más.»",
+      "consigna": "Reescribe el mensaje añadiendo la señal mínima que impida la lectura literal, sin matar el chiste.",
+      "criterios": [
+        "Conserva la ironía",
+        "Incorpora una marca recuperable: alusión al contexto compartido, remate absurdo, emoji o coletilla",
+        "No se convierte en una explicación del chiste"
+      ],
+      "ejemplos": [
+        "«Genial, otro formulario más. Ya vamos por el cuarto de la semana 🙃»",
+        "«Genial: otro formulario. A este ritmo montamos una colección.»"
+      ],
+      "explicacion": "Marcar la ironía no es rendirse: el dato añadido («el cuarto de la semana») da al lector el contexto que le falta, y el remate absurdo confirma que nadie está hablando en serio."
+    },
+    {
+      "id": "pro-006",
+      "modo": "producir",
+      "nivel": 3,
+      "tipo": "dramatica",
+      "contexto": "Escena: dos personajes van a coger un vuelo. El lector ya sabe que ese vuelo se ha cancelado.",
+      "consigna": "Escribe dos líneas de diálogo que exploten la ironía dramática sin que los personajes sospechen nada.",
+      "criterios": [
+        "Los personajes hablan en serio, sin doble intención",
+        "Cada línea gana un sentido distinto sabiendo lo que sabe el lector",
+        "No hay guiño explícito al lector"
+      ],
+      "ejemplos": [
+        "— Por una vez vamos con tiempo de sobra.\n— Ya verás como este es el viaje que sale perfecto.",
+        "— ¿Nos da tiempo a un café?\n— Todo el del mundo."
+      ],
+      "explicacion": "La ironía dramática se construye en el reparto de información, no en las palabras: el diálogo tiene que ser plano y sincero para que el desnivel haga el efecto. Si el personaje guiña, se rompe."
+    },
+    {
+      "id": "pro-007",
+      "modo": "producir",
+      "nivel": 3,
+      "tipo": "situacional",
+      "contexto": "Un personaje dedica meses a construir un refugio antisísmico perfecto en el jardín.",
+      "consigna": "Inventa un final con ironía situacional en dos frases.",
+      "criterios": [
+        "El desenlace contradice la expectativa creada por el esfuerzo previo",
+        "No es solo mala suerte: el propio empeño causa o agrava el desenlace",
+        "Se entiende sin narrador que lo explique"
+      ],
+      "ejemplos": [
+        "«El terremoto llegó de noche. La casa aguantó intacta; lo único que se vino abajo fue el refugio.»",
+        "«Cuando por fin tembló, no pudo llegar al refugio: se había quedado encerrado dentro esa misma tarde, probando la puerta blindada.»"
+      ],
+      "explicacion": "La ironía situacional más fuerte es la que hace que la precaución sea la causa del daño. Si el desenlace es un accidente sin relación con el esfuerzo, es solo una desgracia."
+    },
+    {
+      "id": "pro-008",
+      "modo": "producir",
+      "nivel": 3,
+      "tipo": "pragmatica",
+      "contexto": "Delante de otras personas, alguien te suelta con retintín: «Claro, tú siempre tan rápido entregando.»",
+      "consigna": "Escribe una réplica que desarme la pulla sin escalar el conflicto.",
+      "criterios": [
+        "No devuelve el ataque personal",
+        "Reconoce o reencuadra el dato en lugar de negarlo",
+        "Deja al otro sin espacio para insistir, y a ti sin quedar humillado"
+      ],
+      "ejemplos": [
+        "«Cierto, esta vez me he pasado. El viernes lo tienes.»",
+        "«Rapidísimo. Por eso me tenéis para las cosas que no corren prisa.»",
+        "«Es verdad, ha ido lento. ¿Lo vemos luego y ajustamos plazos?»"
+      ],
+      "explicacion": "Las dos salidas que funcionan son aceptar el dato con naturalidad (le quitas el filo) o asumir la broma y llevarla al absurdo (te sumas al juego). Devolver el sarcasmo escala; defenderse a la defensiva confirma el golpe."
+    }
+  ]
+}
