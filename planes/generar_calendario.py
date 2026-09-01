@@ -47,6 +47,23 @@ SEMANAS = [
     (25, "Carrera", 6, "carrera", "Domingo: 5:13"),
 ]
 
+# Trayectoria de peso: (última semana del tramo, kg por semana).
+# El déficit aprieta en otoño, cuando la carga es baja, y se detiene en la
+# semana 21: la semana pico, el simulacro y el afinado se comen completos.
+TRAYECTORIA_PESO = [(9, 0.55), (17, 0.45), (21, 0.35), (25, 0.0)]
+
+
+def pesos_objetivo(inicial: float) -> dict[int, float]:
+    """Peso objetivo al final de cada semana del plan."""
+    peso, fuera, tramo = inicial, {}, 0
+    for n, _, _, _, _ in SEMANAS:
+        while n > TRAYECTORIA_PESO[tramo][0]:
+            tramo += 1
+        peso -= TRAYECTORIA_PESO[tramo][1]
+        fuera[n] = round(peso, 1)
+    return fuera
+
+
 # plantilla: (día, disciplina, título, minutos, objetivo, descripción)
 # `objetivo` usa marcadores que se sustituyen por tus números: {z2}, {tempo}...
 PLANTILLAS: dict[str, tuple[int, list[tuple]]] = {
@@ -152,8 +169,9 @@ def objetivos(ftp: int, css: int, umbral: int) -> dict[str, str]:
     }
 
 
-def sesiones(ftp: int, css: int, umbral: int) -> list[dict]:
+def sesiones(ftp: int, css: int, umbral: int, peso: float = 90.0) -> list[dict]:
     obj = objetivos(ftp, css, umbral)
+    pesos = pesos_objetivo(peso)
     filas = []
     for num, bloque, horas, plantilla, foco in SEMANAS:
         base_min, ses = PLANTILLAS[plantilla]
@@ -174,6 +192,7 @@ def sesiones(ftp: int, css: int, umbral: int) -> list[dict]:
                 "objetivo": marca.format(**obj) if marca else "",
                 "descripcion": desc,
                 "foco_semana": foco,
+                "peso_objetivo": pesos[num],
             })
     return filas
 
@@ -181,7 +200,7 @@ def sesiones(ftp: int, css: int, umbral: int) -> list[dict]:
 def escribir_csv(filas: list[dict], ruta: Path) -> None:
     with ruta.open("w", newline="", encoding="utf-8") as f:
         campos = ["fecha", "semana", "bloque", "dia", "disciplina", "sesion",
-                  "minutos", "objetivo", "descripcion", "foco_semana"]
+                  "minutos", "objetivo", "descripcion", "foco_semana", "peso_objetivo"]
         w = csv.DictWriter(f, fieldnames=campos)
         w.writeheader()
         w.writerows(filas)
@@ -198,6 +217,7 @@ def escribir_ics(filas: list[dict], ruta: Path) -> None:
     # la sesión más larga del día va por la tarde, que es cuando entrenas;
     # la secundaria por la mañana. Los ladrillos son la excepción: van pegados
     # a la bici, porque salir a correr en frío no entrena lo mismo.
+    pesados: set[str] = set()
     por_dia: dict[str, list[int]] = {}
     for i, f in enumerate(filas):
         if f["minutos"]:
@@ -236,6 +256,20 @@ def escribir_ics(filas: list[dict], ruta: Path) -> None:
         cuerpo = f"Semana {f['semana']} · {f['bloque']}\\n{f['descripcion']}"
         if f["objetivo"]:
             cuerpo += f"\\nObjetivo: {f['objetivo']}"
+        if f["dia"] == "Lun" and f["fecha"] not in pesados:
+            pesados.add(f["fecha"])
+            pesaje = datetime.fromisoformat(f["fecha"]).replace(hour=7, minute=0)
+            out += [
+                "BEGIN:VEVENT",
+                f"UID:plan703-peso-{f['semana']}@find-skill",
+                f"DTSTAMP:{sello}",
+                f"DTSTART:{pesaje.strftime('%Y%m%dT%H%M%S')}",
+                f"DTEND:{(pesaje + timedelta(minutes=10)).strftime('%Y%m%dT%H%M%S')}",
+                f"SUMMARY:⚖️ Control · objetivo {f['peso_objetivo']:.1f} kg".replace(".", ","),
+                "DESCRIPTION:En ayunas y sin ropa. Mide también masa muscular: "
+                "si baja de 38\\,6 kg\\, afloja el déficit.",
+                "END:VEVENT",
+            ]
         out += [
             "BEGIN:VEVENT",
             f"UID:plan703-{i}@find-skill",
@@ -255,11 +289,11 @@ def main() -> None:
     ap.add_argument("--ftp", type=int, default=223, help="FTP en vatios (test de 20' × 0,95)")
     ap.add_argument("--css", default="2:20", help="CSS de nado por 100 m")
     ap.add_argument("--umbral", default="5:30", help="Ritmo umbral de carrera por km")
-    ap.add_argument("--peso", type=float, default=90, help="Peso corporal en kg (solo informativo)")
+    ap.add_argument("--peso", type=float, default=90, help="Peso corporal actual en kg")
     ap.add_argument("--salida", default=".", help="Carpeta donde escribir los ficheros")
     a = ap.parse_args()
 
-    filas = sesiones(a.ftp, parse_pace(a.css), parse_pace(a.umbral))
+    filas = sesiones(a.ftp, parse_pace(a.css), parse_pace(a.umbral), a.peso)
     destino = Path(a.salida)
     destino.mkdir(parents=True, exist_ok=True)
     escribir_csv(filas, destino / "plan-70.3.csv")
@@ -269,6 +303,7 @@ def main() -> None:
     fuerza = sum(1 for f in filas if f["disciplina"] == "Fuerza")
     print(f"{len(filas)} sesiones · {horas:.0f} h · {SEMANAS[0][0]}–{SEMANAS[-1][0]} semanas")
     print(f"  fuerza: {fuerza} sesiones en 25 semanas ({fuerza / 25:.1f} por semana)")
+    print(f"  peso: {a.peso:.0f} kg -> {filas[-1]['peso_objetivo']:.1f} kg el día de carrera")
     print(f"  {destino / 'plan-70.3.csv'}")
     print(f"  {destino / 'plan-70.3.ics'}")
 
