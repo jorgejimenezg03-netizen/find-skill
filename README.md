@@ -56,6 +56,25 @@ añaden `opciones` y `respuesta` (índice), y los de `producir`, `consigna`,
 `criterios` y `ejemplos`. El banco se valida al cargarse, así que un error de
 formato se ve al instante.
 
+## Plan de Ironman 70.3
+
+Plan de 25 semanas para el 70.3 de Monterrey (28 feb 2027), construido sobre
+los parciales reales del atleta. El documento completo —análisis, calibrador de
+zonas y biblioteca de sesiones— está en
+[`planes/ironman-70.3-camino-al-4-04.html`](planes/ironman-70.3-camino-al-4-04.html).
+
+`planes/generar_calendario.py` expande el plan en sesiones con fecha y las
+exporta a CSV (para importar en una app de entrenamiento) y a ICS (para
+cualquier calendario). Los objetivos de cada sesión se calculan desde tus
+tests, así que tras cada retest basta con relanzarlo:
+
+```bash
+python3 planes/generar_calendario.py --ftp 212 --css 2:20 --umbral 5:30 --peso 90
+```
+
+Genera `plan-70.3.csv` y `plan-70.3.ics`: 293 sesiones, 322 h, con la
+trayectoria de peso semanal incluida.
+
 ## Usage
 
 Clone the repository and explore the available tools.
