@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workout_file>
+  <author>Plan 70.3 Monterrey</author>
+  <name>Ladrillo · 90 km a ritmo de carrera</name>
+  <description>El ensayo general, semanas 17 a 22. Potencia plana: sin picos al adelantar ni abandonos en las bajadas. Bebe cada 15' y come cada 20'. Últimos 10' a 95 rpm.</description>
+  <sportType>bike</sportType>
+  <tags><tag name="70.3"/></tags>
+  <workout>
+    <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7"/>
+    <SteadyState Duration="10800" Power="0.775"/>
+    <SteadyState Duration="600" Power="0.775"/>
+    <Cooldown Duration="300" PowerLow="0.6" PowerHigh="0.45"/>
+  </workout>
+</workout_file>

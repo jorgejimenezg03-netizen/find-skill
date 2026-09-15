@@ -75,6 +75,15 @@ python3 planes/generar_calendario.py --ftp 212 --css 2:20 --umbral 5:30 --peso 9
 Genera `plan-70.3.csv` y `plan-70.3.ics`: 279 sesiones, 305 h, con la
 trayectoria de peso semanal incluida.
 
+`planes/generar_zwo.py` escribe las nueve sesiones estructuradas de bici en
+formato `.zwo`, que importan Zwift, Rouvy, Wahoo SYSTM, Garmin Connect e
+intervals.icu. Van expresadas en porcentaje de FTP, así que tras cada retest
+basta con actualizar la FTP en la app: los ficheros no se regeneran.
+
+```bash
+python3 planes/generar_zwo.py --salida sesiones-bici
+```
+
 ## Usage
 
 Clone the repository and explore the available tools.

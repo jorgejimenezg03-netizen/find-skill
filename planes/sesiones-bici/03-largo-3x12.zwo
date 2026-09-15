@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workout_file>
+  <author>Plan 70.3 Monterrey</author>
+  <name>Rodaje largo con 3×12'</name>
+  <description>El motor de la bici, semanas 9 a 16. Las series van dentro del rodaje y la recuperación es rodando en Z2, sin parar. Come cada 30 minutos.</description>
+  <sportType>bike</sportType>
+  <tags><tag name="70.3"/></tags>
+  <workout>
+    <Warmup Duration="2700" PowerLow="0.55" PowerHigh="0.7"/>
+    <IntervalsT Repeat="3" OnDuration="720" OffDuration="360" OnPower="0.83" OffPower="0.65"/>
+    <SteadyState Duration="1800" Power="0.65"/>
+    <Cooldown Duration="600" PowerLow="0.6" PowerHigh="0.4"/>
+  </workout>
+</workout_file>

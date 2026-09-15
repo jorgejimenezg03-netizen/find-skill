@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workout_file>
+  <author>Plan 70.3 Monterrey</author>
+  <name>Tempo · 3×8'</name>
+  <description>Primer escalón de intensidad, semanas 6 a 11. A 85-90 rpm y en acoples.</description>
+  <sportType>bike</sportType>
+  <tags><tag name="70.3"/></tags>
+  <workout>
+    <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7"/>
+    <IntervalsT Repeat="3" OnDuration="30" OffDuration="30" OnPower="0.85" OffPower="0.5"/>
+    <IntervalsT Repeat="3" OnDuration="480" OffDuration="240" OnPower="0.885" OffPower="0.5"/>
+    <Cooldown Duration="600" PowerLow="0.6" PowerHigh="0.4"/>
+  </workout>
+</workout_file>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workout_file>
+  <author>Plan 70.3 Monterrey</author>
+  <name>Rodaje Z2</name>
+  <description>La sesión más repetida del plan y la que construye el motor. Debes poder hablar en frases completas de principio a fin.</description>
+  <sportType>bike</sportType>
+  <tags><tag name="70.3"/></tags>
+  <workout>
+    <Warmup Duration="600" PowerLow="0.45" PowerHigh="0.6"/>
+    <SteadyState Duration="4200" Power="0.65"/>
+    <Cooldown Duration="600" PowerLow="0.6" PowerHigh="0.4"/>
+  </workout>
+</workout_file>
