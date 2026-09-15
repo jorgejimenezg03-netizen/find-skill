@@ -15,42 +15,42 @@ import csv
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-INICIO = date(2026, 9, 7)  # lunes de la semana 1
+INICIO = date(2026, 9, 15)     # martes: la semana 1 es parcial (6 días)
+LUNES_S2 = date(2026, 9, 21)   # desde aquí, semanas completas de lunes a domingo
 DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
 # semana: (nº, bloque, horas, plantilla, foco)
 SEMANAS = [
-    (1, "Test", 11, "test", "Tests de las tres disciplinas. Se montan los acoples"),
+    (1, "Test", 8, "test_inicial", "Semana parcial de 6 días. Los tres tests y se montan los acoples"),
     (2, "Base 1", 12, "base", "Primera semana con zonas. Adaptación a los acoples"),
     (3, "Base 1", 13, "base", "Rodaje largo a 2:45, ya en acoples"),
-    (4, "Base 1", 14, "base", "Primera semana de carga dirigida"),
-    (5, "Descarga", 9, "base", "Asimilación"),
-    (6, "Base 2", 14, "base", "Última semana solo aeróbica"),
-    (7, "Construcción 1", 15, "constr", "Entra el tempo"),
-    (8, "Construcción 1", 15, "constr", "Empiezan las transiciones cronometradas"),
-    (9, "Descarga + test", 10, "test", "Se repiten los tres tests"),
-    (10, "Construcción 1", 15, "constr", "Bloques de 3×12'. Nutrición: 50 g/h"),
-    (11, "Construcción 1", 16, "constr", "Rodaje largo a 3:15"),
-    (12, "Construcción 1", 16, "constr", "Nutrición a 65 g/h"),
-    (13, "Descarga", 10, "constr", "Asimilación sin perder ritmos"),
-    (14, "Construcción 2", 15, "constr", "Umbral en bici: 3×10' al 95 %"),
-    (15, "Construcción 2", 16, "constr", "Semana más dura del bloque"),
-    (16, "Descarga navideña", 9, "constr", "Semana ligera y flexible"),
-    (17, "Construcción 2 + test", 14, "test", "Tests. Se fija el objetivo definitivo"),
-    (18, "Específico 1", 16, "espec", "Todo a ritmo de carrera"),
-    (19, "Específico 1", 16, "espec", "Ladrillo completo con material de carrera"),
-    (20, "Específico 1", 15, "espec", "Nado en aguas abiertas"),
-    (21, "Descarga + competición", 11, "espec", "Carrera de preparación"),
-    (22, "Específico 2", 16, "espec", "Ladrillo de 3:45. Semana pico"),
-    (23, "Específico 2", 14, "espec", "Última semana de carga"),
-    (24, "Afinado", 11, "taper", "Baja el volumen, se mantienen los ritmos"),
-    (25, "Carrera", 6, "carrera", "Domingo: 5:13"),
+    (4, "Descarga", 9, "base", "Asimilación. Semana corta, nada de heroicidades"),
+    (5, "Base 2", 14, "base", "Última semana solo aeróbica. Carrera larga a 1:20"),
+    (6, "Construcción 1", 15, "constr", "Entra el tempo: 3×8' en bici y 4×5' corriendo"),
+    (7, "Construcción 1", 15, "constr", "Empiezan las transiciones cronometradas, 20' semanales"),
+    (8, "Descarga + test", 10, "test", "Se repiten los tres tests. Segundo vídeo de nado"),
+    (9, "Construcción 1", 15, "constr", "Bloques de 3×12'. Arranca la nutrición: 50 g/h"),
+    (10, "Construcción 1", 16, "constr", "Rodaje largo a 3:15. Carrera larga a 1:30"),
+    (11, "Descarga", 10, "constr", "Asimilación sin perder los ritmos"),
+    (12, "Construcción 2", 15, "constr", "Umbral en bici: 3×10' al 95 %. Nutrición a 65 g/h"),
+    (13, "Construcción 2", 16, "constr", "Semana más dura del bloque"),
+    (14, "Construcción 2", 15, "constr", "Último empujón antes de Navidad"),
+    (15, "Descarga navideña", 9, "constr", "Semana ligera y flexible. Mantén tres sesiones"),
+    (16, "Construcción 2 + test", 14, "test", "Tests otra vez. Aquí se fija el objetivo definitivo"),
+    (17, "Específico 1", 16, "espec", "Todo a ritmo de carrera. 2×25' en acoples"),
+    (18, "Específico 1", 16, "espec", "Ladrillo completo con la nutrición y el material de carrera"),
+    (19, "Específico 1", 15, "espec", "6×1 km a ritmo objetivo. Nado en aguas abiertas"),
+    (20, "Descarga + competición", 11, "espec", "Carrera de preparación: olímpico o medio maratón"),
+    (21, "Específico 2", 16, "espec", "Ladrillo de 3:45 con transición cronometrada. Semana pico"),
+    (22, "Específico 2", 14, "espec", "Última semana de carga. Se cierra material y estrategia"),
+    (23, "Afinado", 11, "taper", "Baja el volumen, se mantienen los ritmos"),
+    (24, "Carrera", 6, "carrera", "Domingo 28 de febrero: 5:03"),
 ]
 
 # Trayectoria de peso: (última semana del tramo, kg por semana).
 # El déficit aprieta en otoño, cuando la carga es baja, y se detiene en la
-# semana 21: la semana pico, el simulacro y el afinado se comen completos.
-TRAYECTORIA_PESO = [(9, 0.55), (17, 0.45), (21, 0.35), (25, 0.0)]
+# semana 20: la semana pico, el simulacro y el afinado se comen completos.
+TRAYECTORIA_PESO = [(8, 0.55), (16, 0.48), (20, 0.35), (24, 0.0)]
 
 
 def pesos_objetivo(inicial: float) -> dict[int, float]:
@@ -109,6 +109,16 @@ PLANTILLAS: dict[str, tuple[int, list[tuple]]] = {
         (5, "Bici", "Ladrillo: 90 km", 225, "{race_w}", "Cal 15' | 90 km en acoples a ritmo de carrera: potencia plana, bebe cada 15', come cada 20'. Últimos 10' a 95 rpm | T2 cronometrada, objetivo bajar de 2:00"),
         (5, "Carrera", "Ladrillo a ritmo", 40, "{race_run}", "Primeros 10' a ritmo objetivo +10 s/km (contenido), 25' a ritmo de carrera con un gel a los 20', últimos 5' libres. Apunta el ritmo de los últimos 10'"),
         (6, "Carrera", "Larga", 100, "{run_z2}", "Larga en Z2 con los últimos 20' a ritmo de carrera. Simula el final del medio maratón"),
+    ]),
+    # Semana 1: arranca en martes, seis días, y mete los tres tests sin apretar.
+    "test_inicial": (8 * 60, [
+        (0, "Bici", "Test de FTP", 75, "", "Cal 20' progresivo + 3×1' fuerte r2' | 5' suave | 20' A TOPE en acoples, empieza conservador y sube desde el minuto 5 | Calma 10'. FTP = potencia media × 0,95"),
+        (1, "Carrera", "Test de 30'", 60, "", "Cal 15' Z2 + 4×20\" zancadas | 30' contrarreloj en llano, ritmo sostenible máximo | Calma 10'. Tu umbral es el ritmo medio de los últimos 20'"),
+        (2, "Nado", "Test de CSS", 60, "", "Cal 600 m suave + 4×50 progresivos | 400 m A TOPE, anota el tiempo · 5' de descanso completo · 200 m A TOPE | Calma 200 m. CSS por 100 m = (t400 − t200) ÷ 2"),
+        (2, "Bici", "Rodaje Z2", 60, "{z2}", "Rodaje suave en Z2. Aprovecha para ajustar altura y alcance de los acoples recién montados"),
+        (3, "Nado", "Técnica con vídeo", 45, "{nado_z2}", "Cal 300 m | 8×50 con tabla · 8×50 con pull-boy · 6×25 puño cerrado | Calma 200 m. Grábate de frente y de lado: este vídeo es tu punto de partida técnico"),
+        (4, "Bici", "Rodaje largo", 135, "{z2}", "Rodaje largo en Z2. Alterna 15' en acoples y 5' en manetas: la primera semana la espalda no aguanta seguido, y es normal"),
+        (5, "Carrera", "Larga", 60, "{run_z2}", "Larga en Z2 a ritmo constante. Si vienes de correr menos de 1,5 h semanales, recorta a 45' y sube un 10 % por semana"),
     ]),
     "test": (11 * 60, [
         (0, "Nado", "Test de CSS", 60, "", "Cal 600 m suave + 4×50 progresivos | 400 m A TOPE, anota el tiempo · 5' de descanso completo · 200 m A TOPE | Calma 200 m. CSS por 100 m = (t400 − t200) ÷ 2"),
@@ -176,16 +186,17 @@ def sesiones(ftp: int, css: int, umbral: int, peso: float = 90.0) -> list[dict]:
     for num, bloque, horas, plantilla, foco in SEMANAS:
         base_min, ses = PLANTILLAS[plantilla]
         factor = (horas * 60) / base_min
-        lunes = INICIO + timedelta(weeks=num - 1)
+        primero = INICIO if num == 1 else LUNES_S2 + timedelta(weeks=num - 2)
         for dia, disc, titulo, minutos, marca, desc in ses:
+            fecha = primero + timedelta(days=dia)
             dur = round(minutos * factor / 5) * 5 if minutos else 0
             if minutos and dur < 15:
                 dur = 15
             filas.append({
-                "fecha": (lunes + timedelta(days=dia)).isoformat(),
+                "fecha": fecha.isoformat(),
                 "semana": num,
                 "bloque": bloque,
-                "dia": DIAS[dia],
+                "dia": DIAS[fecha.weekday()],
                 "disciplina": disc,
                 "sesion": titulo,
                 "minutos": dur,

@@ -58,7 +58,7 @@ formato se ve al instante.
 
 ## Plan de Ironman 70.3
 
-Plan de 25 semanas para el 70.3 de Monterrey (28 feb 2027), construido sobre
+Plan de 24 semanas para el 70.3 de Monterrey (28 feb 2027), del 15 de septiembre de 2026 al día de carrera, construido sobre
 los parciales reales del atleta. El documento completo —análisis, calibrador de
 zonas y biblioteca de sesiones— está en
 [`planes/ironman-70.3-camino-al-4-04.html`](planes/ironman-70.3-camino-al-4-04.html).
@@ -72,7 +72,7 @@ tests, así que tras cada retest basta con relanzarlo:
 python3 planes/generar_calendario.py --ftp 212 --css 2:20 --umbral 5:30 --peso 90
 ```
 
-Genera `plan-70.3.csv` y `plan-70.3.ics`: 293 sesiones, 322 h, con la
+Genera `plan-70.3.csv` y `plan-70.3.ics`: 279 sesiones, 305 h, con la
 trayectoria de peso semanal incluida.
 
 ## Usage
