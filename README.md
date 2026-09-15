@@ -84,6 +84,14 @@ basta con actualizar la FTP en la app: los ficheros no se regeneran.
 python3 planes/generar_zwo.py --salida sesiones-bici
 ```
 
+`planes/generar_pdf.py` imprime el plan a PDF en A4 (42 páginas), con un anexo
+que lista las 279 sesiones semana a semana. Incrusta las tipografías y despliega
+las pestañas, que en papel no se pueden pulsar. Necesita Chromium.
+
+```bash
+python3 planes/generar_pdf.py --csv plan-70.3.csv --salida plan-70.3-monterrey.pdf
+```
+
 ## Usage
 
 Clone the repository and explore the available tools.
